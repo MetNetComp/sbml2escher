@@ -1,0 +1,9 @@
+{
+  "model_id": "iMM904",
+  "source_url": "https://bigg.ucsd.edu/static/models/iMM904.json",
+  "retrieved_at_utc": "2026-10-20T13:51:10.366779+00:00",
+  "download_sha256": "1f7c573c2cf3da104fe48c49d6ae8e5a4a3472e7dc03c173c660e8bd9bb2557f",
+  "reactions": 1577,
+  "metabolites": 1226,
+  "bounds_modified": false
+}

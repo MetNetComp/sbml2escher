@@ -1,0 +1,14 @@
+{
+  "map-schema-1-0-0.json": {
+    "source": "https://raw.githubusercontent.com/zakandrewking/escher/master/jsonschema/1-0-0",
+    "sha256": "641e430ed0e11540541114457430255c3f8c8d89ceb889d764a79f0ab39ed6a8"
+  },
+  "escher-1.8.1.min.js": {
+    "source": "https://unpkg.com/escher@1.8.1/dist/escher.min.js",
+    "sha256": "38c105f01ee8d14afbdeb4c61d67ac64425088d189b45666f585a930e63f9927"
+  },
+  "LICENSE": {
+    "source": "https://unpkg.com/escher@1.8.1/LICENSE",
+    "sha256": "8d76c72b2f4ef701b9302cc54a837c461edbd3adc07fcca26794f1501fbb6faa"
+  }
+}

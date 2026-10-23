@@ -1,0 +1,15 @@
+{
+  "name": "Specified major pathway: EMP glycolysis with PTS uptake",
+  "reaction_ids": ["GLCpts", "PGI", "PFK", "FBA", "TPI", "GAPD", "PGK", "PGM", "ENO", "PYK"],
+  "metabolite_ids": [
+    "glc__D_e", "g6p_c", "f6p_c", "fdp_c", "dhap_c", "g3p_c",
+    "13dpg_c", "3pg_c", "2pg_c", "pep_c", "pyr_c"
+  ],
+  "display_edges": [
+    ["glc__D_e", "g6p_c"], ["g6p_c", "f6p_c"],
+    ["f6p_c", "fdp_c"], ["fdp_c", "dhap_c"],
+    ["fdp_c", "g3p_c"], ["dhap_c", "g3p_c"],
+    ["g3p_c", "13dpg_c"], ["13dpg_c", "3pg_c"],
+    ["3pg_c", "2pg_c"], ["2pg_c", "pep_c"], ["pep_c", "pyr_c"]
+  ]
+}

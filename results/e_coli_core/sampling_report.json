@@ -1,0 +1,36 @@
+{
+  "method": "Random-direction hit-and-run with discarded covariance adaptation",
+  "stationary_target": "Uniform volume in the affine feasible flux polytope",
+  "bounds_modified": false,
+  "objective_conditioning": false,
+  "seed": 0,
+  "chains": 4,
+  "samples_per_chain": 2000,
+  "total_samples": 8000,
+  "thinning": 100,
+  "burn_in": 10000,
+  "adaptation_phases": 4,
+  "affine_dimension": 24,
+  "fixed_reaction_ids": [
+    "EX_fru_e",
+    "EX_fum_e",
+    "EX_gln__L_e",
+    "EX_mal__L_e",
+    "FRUpts2",
+    "FUMt2_2",
+    "GLNabc",
+    "MALt2_2"
+  ],
+  "mass_balance_max_abs": 2.8883562208648073e-11,
+  "bound_violation_max": 1.0643990716297249e-13,
+  "max_split_rhat": 1.0066654763832312,
+  "min_effective_sample_size": 524.8162094643932,
+  "diagnostic_criteria": {
+    "max_split_rhat": 1.05,
+    "min_effective_sample_size": 100
+  },
+  "mixing_checks_passed": true,
+  "limitation": "Finite correlated MCMC samples, not proof of convergence; bounds and internal cycles affect medians.",
+  "model_sha256": "deb260e7fc6459b5636d095dc2f20668add20e6e6cfd4a01d432cac94838a0e9",
+  "samples_sha256": "c2d36deb660b85c763b1429d3c72e37729edd692fef89d6091ebc202e62765c3"
+}

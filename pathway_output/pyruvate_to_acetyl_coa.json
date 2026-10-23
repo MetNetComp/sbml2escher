@@ -1,0 +1,96 @@
+{
+  "name": "Pyruvate to acetyl-CoA via pyruvate dehydrogenase",
+  "selection_basis": "Canonical aerobic route; not a flux ranking",
+  "model_id": "e_coli_core",
+  "metabolite_ids": [
+    "pyr_c",
+    "accoa_c"
+  ],
+  "display_edges": [
+    [
+      "pyr_c",
+      "accoa_c"
+    ]
+  ],
+  "reaction_ids": [
+    "PDH"
+  ],
+  "reactions": [
+    {
+      "id": "PDH",
+      "name": "Pyruvate dehydrogenase",
+      "metabolites": {
+        "accoa_c": 1.0,
+        "co2_c": 1.0,
+        "coa_c": -1.0,
+        "nad_c": -1.0,
+        "nadh_c": 1.0,
+        "pyr_c": -1.0
+      },
+      "lower_bound": 0.0,
+      "upper_bound": 1000.0,
+      "gene_reaction_rule": "b0114 and b0115 and b0116",
+      "subsystem": "Glycolysis/Gluconeogenesis",
+      "notes": {
+        "original_bigg_ids": [
+          "PDH"
+        ]
+      },
+      "annotation": {
+        "bigg.reaction": [
+          "PDH"
+        ],
+        "biocyc": [
+          "META:PYRUVDEH-RXN"
+        ],
+        "ec-code": [
+          "1.2.1",
+          "1.8.1.4",
+          "1.2.1.51",
+          "1.2.4.1",
+          "2.3.1.12"
+        ],
+        "kegg.reaction": [
+          "R00209"
+        ],
+        "metanetx.reaction": [
+          "MNXR102425"
+        ],
+        "reactome.reaction": [
+          "R-RNO-71397",
+          "R-OSA-71397",
+          "R-GGA-373177",
+          "R-DME-71397",
+          "R-TGU-71397",
+          "R-XTR-71397",
+          "R-CFA-71397",
+          "R-BTA-71397",
+          "R-HSA-71397",
+          "R-GGA-71397",
+          "R-SPO-71397",
+          "R-CEL-71397",
+          "R-DDI-71397",
+          "R-DRE-71397",
+          "R-SSC-71397",
+          "R-SCE-71397",
+          "R-ATH-71397",
+          "R-MMU-71397"
+        ],
+        "rhea": [
+          "28043",
+          "28045",
+          "28044",
+          "28042"
+        ],
+        "sabiork": [
+          "523"
+        ],
+        "sbo": "SBO:0000176",
+        "seed.reaction": [
+          "rxn00154"
+        ]
+      }
+    }
+  ],
+  "equation": "pyr_c + coa_c + nad_c -> accoa_c + co2_c + nadh_c"
+}

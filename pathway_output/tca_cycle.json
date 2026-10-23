@@ -1,0 +1,1362 @@
+{
+  "name": "Canonical oxidative TCA cycle",
+  "model_id": "e_coli_core",
+  "topology": "cycle",
+  "closed": true,
+  "metabolite_ids": [
+    "oaa_c",
+    "cit_c",
+    "acon_C_c",
+    "icit_c",
+    "akg_c",
+    "succoa_c",
+    "succ_c",
+    "fum_c",
+    "mal__L_c"
+  ],
+  "entry_metabolite_ids": [
+    "accoa_c"
+  ],
+  "display_edges": [
+    [
+      "oaa_c",
+      "cit_c"
+    ],
+    [
+      "cit_c",
+      "acon_C_c"
+    ],
+    [
+      "acon_C_c",
+      "icit_c"
+    ],
+    [
+      "icit_c",
+      "akg_c"
+    ],
+    [
+      "akg_c",
+      "succoa_c"
+    ],
+    [
+      "succoa_c",
+      "succ_c"
+    ],
+    [
+      "succ_c",
+      "fum_c"
+    ],
+    [
+      "fum_c",
+      "mal__L_c"
+    ],
+    [
+      "mal__L_c",
+      "oaa_c"
+    ]
+  ],
+  "entry_edges": [
+    [
+      "accoa_c",
+      "cit_c"
+    ]
+  ],
+  "entry_reaction_id": "CS",
+  "reactions": [
+    {
+      "reaction_id": "CS",
+      "model_direction": 1,
+      "source": "oaa_c",
+      "target": "cit_c",
+      "oriented_stoichiometry": {
+        "accoa_c": -1.0,
+        "cit_c": 1.0,
+        "coa_c": 1.0,
+        "h2o_c": -1.0,
+        "h_c": 1.0,
+        "oaa_c": -1.0
+      },
+      "original_reaction": {
+        "id": "CS",
+        "name": "Citrate synthase",
+        "metabolites": {
+          "accoa_c": -1.0,
+          "cit_c": 1.0,
+          "coa_c": 1.0,
+          "h2o_c": -1.0,
+          "h_c": 1.0,
+          "oaa_c": -1.0
+        },
+        "lower_bound": 0.0,
+        "upper_bound": 1000.0,
+        "gene_reaction_rule": "b0720",
+        "subsystem": "Citric Acid Cycle",
+        "notes": {
+          "original_bigg_ids": [
+            "CS"
+          ]
+        },
+        "annotation": {
+          "bigg.reaction": [
+            "CS"
+          ],
+          "biocyc": [
+            "META:CITSYN-RXN",
+            "META:RXN-14905"
+          ],
+          "ec-code": [
+            "2.3.3.16",
+            "2.3.3.1",
+            "2.3.3.3"
+          ],
+          "kegg.reaction": [
+            "R00351"
+          ],
+          "metanetx.reaction": [
+            "MNXR96920"
+          ],
+          "reactome.reaction": [
+            "R-GGA-373006",
+            "R-GGA-70975",
+            "R-CEL-70975",
+            "R-HSA-70975",
+            "R-DRE-70975",
+            "R-MMU-70975",
+            "R-ATH-70975",
+            "R-SPO-70975",
+            "R-OSA-70975",
+            "R-SCE-70975",
+            "R-SSC-70975",
+            "R-DDI-70975",
+            "R-RNO-70975",
+            "R-DME-70975",
+            "R-PFA-70975",
+            "R-XTR-70975",
+            "R-CFA-70975",
+            "R-BTA-70975"
+          ],
+          "rhea": [
+            "16847",
+            "16846",
+            "16845",
+            "16848"
+          ],
+          "sabiork": [
+            "267"
+          ],
+          "sbo": "SBO:0000176",
+          "seed.reaction": [
+            "rxn00256"
+          ]
+        }
+      }
+    },
+    {
+      "reaction_id": "ACONTa",
+      "model_direction": 1,
+      "source": "cit_c",
+      "target": "acon_C_c",
+      "oriented_stoichiometry": {
+        "acon_C_c": 1.0,
+        "cit_c": -1.0,
+        "h2o_c": 1.0
+      },
+      "original_reaction": {
+        "id": "ACONTa",
+        "name": "Aconitase (half-reaction A, Citrate hydro-lyase)",
+        "metabolites": {
+          "acon_C_c": 1.0,
+          "cit_c": -1.0,
+          "h2o_c": 1.0
+        },
+        "lower_bound": -1000.0,
+        "upper_bound": 1000.0,
+        "gene_reaction_rule": "b0118 or b1276",
+        "subsystem": "Citric Acid Cycle",
+        "notes": {
+          "original_bigg_ids": [
+            "ACONTa"
+          ]
+        },
+        "annotation": {
+          "bigg.reaction": [
+            "ACONTa"
+          ],
+          "biocyc": [
+            "META:ACONITATEDEHYDR-RXN"
+          ],
+          "ec-code": [
+            "4.2.1.3"
+          ],
+          "kegg.reaction": [
+            "R01325"
+          ],
+          "metanetx.reaction": [
+            "MNXR95386"
+          ],
+          "rhea": [
+            "10230",
+            "10229",
+            "10231",
+            "10228"
+          ],
+          "sabiork": [
+            "268"
+          ],
+          "sbo": "SBO:0000176",
+          "seed.reaction": [
+            "rxn00974"
+          ]
+        }
+      }
+    },
+    {
+      "reaction_id": "ACONTb",
+      "model_direction": 1,
+      "source": "acon_C_c",
+      "target": "icit_c",
+      "oriented_stoichiometry": {
+        "acon_C_c": -1.0,
+        "h2o_c": -1.0,
+        "icit_c": 1.0
+      },
+      "original_reaction": {
+        "id": "ACONTb",
+        "name": "Aconitase (half-reaction B, Isocitrate hydro-lyase)",
+        "metabolites": {
+          "acon_C_c": -1.0,
+          "h2o_c": -1.0,
+          "icit_c": 1.0
+        },
+        "lower_bound": -1000.0,
+        "upper_bound": 1000.0,
+        "gene_reaction_rule": "b0118 or b1276",
+        "subsystem": "Citric Acid Cycle",
+        "notes": {
+          "original_bigg_ids": [
+            "ACONTb"
+          ]
+        },
+        "annotation": {
+          "bigg.reaction": [
+            "ACONTb"
+          ],
+          "ec-code": [
+            "4.2.1.3"
+          ],
+          "kegg.reaction": [
+            "R01900"
+          ],
+          "metanetx.reaction": [
+            "MNXR95387"
+          ],
+          "rhea": [
+            "22145",
+            "22144",
+            "22146",
+            "22147"
+          ],
+          "sbo": "SBO:0000176",
+          "seed.reaction": [
+            "rxn01388"
+          ]
+        }
+      }
+    },
+    {
+      "reaction_id": "ICDHyr",
+      "model_direction": 1,
+      "source": "icit_c",
+      "target": "akg_c",
+      "oriented_stoichiometry": {
+        "akg_c": 1.0,
+        "co2_c": 1.0,
+        "icit_c": -1.0,
+        "nadp_c": -1.0,
+        "nadph_c": 1.0
+      },
+      "original_reaction": {
+        "id": "ICDHyr",
+        "name": "Isocitrate dehydrogenase (NADP)",
+        "metabolites": {
+          "akg_c": 1.0,
+          "co2_c": 1.0,
+          "icit_c": -1.0,
+          "nadp_c": -1.0,
+          "nadph_c": 1.0
+        },
+        "lower_bound": -1000.0,
+        "upper_bound": 1000.0,
+        "gene_reaction_rule": "b1136",
+        "subsystem": "Citric Acid Cycle",
+        "notes": {
+          "original_bigg_ids": [
+            "ICDHyr"
+          ]
+        },
+        "annotation": {
+          "bigg.reaction": [
+            "ICDHyr"
+          ],
+          "ec-code": [
+            "1.1.1.42"
+          ],
+          "kegg.reaction": [
+            "R00267"
+          ],
+          "metanetx.reaction": [
+            "MNXR100781"
+          ],
+          "rhea": [
+            "19629",
+            "19630",
+            "19631",
+            "19632"
+          ],
+          "sabiork": [
+            "269"
+          ],
+          "sbo": "SBO:0000176",
+          "seed.reaction": [
+            "rxn00198"
+          ]
+        }
+      }
+    },
+    {
+      "reaction_id": "AKGDH",
+      "model_direction": 1,
+      "source": "akg_c",
+      "target": "succoa_c",
+      "oriented_stoichiometry": {
+        "akg_c": -1.0,
+        "co2_c": 1.0,
+        "coa_c": -1.0,
+        "nad_c": -1.0,
+        "nadh_c": 1.0,
+        "succoa_c": 1.0
+      },
+      "original_reaction": {
+        "id": "AKGDH",
+        "name": "2-Oxogluterate dehydrogenase",
+        "metabolites": {
+          "akg_c": -1.0,
+          "co2_c": 1.0,
+          "coa_c": -1.0,
+          "nad_c": -1.0,
+          "nadh_c": 1.0,
+          "succoa_c": 1.0
+        },
+        "lower_bound": 0.0,
+        "upper_bound": 1000.0,
+        "gene_reaction_rule": "b0116 and b0726 and b0727",
+        "subsystem": "Citric Acid Cycle",
+        "notes": {
+          "original_bigg_ids": [
+            "AKGDH"
+          ]
+        },
+        "annotation": {
+          "bigg.reaction": [
+            "AKGDH"
+          ],
+          "biocyc": [
+            "META:2OXOGLUTARATEDEH-RXN"
+          ],
+          "ec-code": [
+            "1.2.1.52",
+            "2.3.1.61",
+            "1.8.1.4",
+            "1.2.4.2"
+          ],
+          "kegg.reaction": [
+            "R08549"
+          ],
+          "metanetx.reaction": [
+            "MNXR95655"
+          ],
+          "reactome.reaction": [
+            "R-PFA-71401",
+            "R-XTR-71401",
+            "R-SCE-71401",
+            "R-SSC-71401",
+            "R-TGU-71401",
+            "R-ATH-71401",
+            "R-OSA-71401",
+            "R-SPO-71401",
+            "R-CEL-71401",
+            "R-RNO-71401",
+            "R-DRE-71401",
+            "R-GGA-373042",
+            "R-DDI-71401",
+            "R-CFA-71401",
+            "R-HSA-71401",
+            "R-BTA-71401",
+            "R-DME-71401",
+            "R-MMU-71401",
+            "R-GGA-71401"
+          ],
+          "rhea": [
+            "27789",
+            "27788",
+            "27786",
+            "27787"
+          ],
+          "sabiork": [
+            "8163"
+          ],
+          "sbo": "SBO:0000176",
+          "seed.reaction": [
+            "rxn08094"
+          ]
+        }
+      }
+    },
+    {
+      "reaction_id": "SUCOAS",
+      "model_direction": -1,
+      "source": "succoa_c",
+      "target": "succ_c",
+      "oriented_stoichiometry": {
+        "adp_c": -1.0,
+        "atp_c": 1.0,
+        "coa_c": 1.0,
+        "pi_c": -1.0,
+        "succ_c": 1.0,
+        "succoa_c": -1.0
+      },
+      "original_reaction": {
+        "id": "SUCOAS",
+        "name": "Succinyl-CoA synthetase (ADP-forming)",
+        "metabolites": {
+          "adp_c": 1.0,
+          "atp_c": -1.0,
+          "coa_c": -1.0,
+          "pi_c": 1.0,
+          "succ_c": -1.0,
+          "succoa_c": 1.0
+        },
+        "lower_bound": -1000.0,
+        "upper_bound": 1000.0,
+        "gene_reaction_rule": "b0728 and b0729",
+        "subsystem": "Citric Acid Cycle",
+        "notes": {
+          "original_bigg_ids": [
+            "SUCOAS"
+          ]
+        },
+        "annotation": {
+          "bigg.reaction": [
+            "SUCOAS"
+          ],
+          "biocyc": [
+            "META:SUCCCOASYN-RXN"
+          ],
+          "ec-code": [
+            "6.2.1.5"
+          ],
+          "kegg.reaction": [
+            "R00405"
+          ],
+          "metanetx.reaction": [
+            "MNXR104635"
+          ],
+          "reactome.reaction": [
+            "R-BTA-70997",
+            "R-GGA-372977",
+            "R-PFA-70997",
+            "R-GGA-373134",
+            "R-TGU-70997",
+            "R-XTR-70997",
+            "R-SSC-70997",
+            "R-HSA-70997",
+            "R-DRE-70997",
+            "R-SCE-70997",
+            "R-SPO-70997",
+            "R-DDI-70997",
+            "R-CFA-70997",
+            "R-OSA-70997",
+            "R-GGA-70997",
+            "R-RNO-70997",
+            "R-ATH-70997",
+            "R-MMU-70997"
+          ],
+          "rhea": [
+            "17664",
+            "17663",
+            "17662",
+            "17661"
+          ],
+          "sabiork": [
+            "260"
+          ],
+          "sbo": "SBO:0000176",
+          "seed.reaction": [
+            "rxn00285"
+          ]
+        }
+      }
+    },
+    {
+      "reaction_id": "SUCDi",
+      "model_direction": 1,
+      "source": "succ_c",
+      "target": "fum_c",
+      "oriented_stoichiometry": {
+        "fum_c": 1.0,
+        "q8_c": -1.0,
+        "q8h2_c": 1.0,
+        "succ_c": -1.0
+      },
+      "original_reaction": {
+        "id": "SUCDi",
+        "name": "Succinate dehydrogenase (irreversible)",
+        "metabolites": {
+          "fum_c": 1.0,
+          "q8_c": -1.0,
+          "q8h2_c": 1.0,
+          "succ_c": -1.0
+        },
+        "lower_bound": 0.0,
+        "upper_bound": 1000.0,
+        "gene_reaction_rule": "b0721 and b0722 and b0723 and b0724",
+        "subsystem": "Oxidative Phosphorylation",
+        "notes": {
+          "original_bigg_ids": [
+            "SUCDi"
+          ]
+        },
+        "annotation": {
+          "bigg.reaction": [
+            "SUCDi"
+          ],
+          "metanetx.reaction": [
+            "MNXR99641"
+          ],
+          "rhea": [
+            "29190",
+            "29189",
+            "29187",
+            "29188"
+          ],
+          "sbo": "SBO:0000176",
+          "seed.reaction": [
+            "rxn09272"
+          ]
+        }
+      }
+    },
+    {
+      "reaction_id": "FUM",
+      "model_direction": 1,
+      "source": "fum_c",
+      "target": "mal__L_c",
+      "oriented_stoichiometry": {
+        "fum_c": -1.0,
+        "h2o_c": -1.0,
+        "mal__L_c": 1.0
+      },
+      "original_reaction": {
+        "id": "FUM",
+        "name": "Fumarase",
+        "metabolites": {
+          "fum_c": -1.0,
+          "h2o_c": -1.0,
+          "mal__L_c": 1.0
+        },
+        "lower_bound": -1000.0,
+        "upper_bound": 1000.0,
+        "gene_reaction_rule": "b1612 or b4122 or b1611",
+        "subsystem": "Citric Acid Cycle",
+        "notes": {
+          "original_bigg_ids": [
+            "FUM"
+          ]
+        },
+        "annotation": {
+          "bigg.reaction": [
+            "FUM"
+          ],
+          "biocyc": [
+            "META:FUMHYDR-RXN"
+          ],
+          "ec-code": [
+            "4.2.1.2"
+          ],
+          "kegg.reaction": [
+            "R01082"
+          ],
+          "metanetx.reaction": [
+            "MNXR99705"
+          ],
+          "reactome.reaction": [
+            "R-TGU-451033",
+            "R-TGU-70982",
+            "R-HSA-70982",
+            "R-ATH-451033",
+            "R-SPO-70982",
+            "R-SPO-451033",
+            "R-XTR-451033",
+            "R-MMU-70982",
+            "R-DRE-70982",
+            "R-DME-70982",
+            "R-DME-451033",
+            "R-HSA-451033",
+            "R-SCE-451033",
+            "R-DDI-451033",
+            "R-OSA-451033",
+            "R-CFA-70982",
+            "R-XTR-70982",
+            "R-MMU-451033",
+            "R-OSA-70982",
+            "R-BTA-70982",
+            "R-DRE-451033",
+            "R-GGA-373141",
+            "R-RNO-451033",
+            "R-CEL-451033",
+            "R-ATH-70982",
+            "R-GGA-373145",
+            "R-CEL-70982",
+            "R-BTA-451033",
+            "R-SSC-451033",
+            "R-SCE-70982",
+            "R-CFA-451033",
+            "R-RNO-70982",
+            "R-GGA-70982",
+            "R-DDI-70982",
+            "R-GGA-451033",
+            "R-SSC-70982"
+          ],
+          "rhea": [
+            "12463",
+            "12461",
+            "12462",
+            "12460"
+          ],
+          "sabiork": [
+            "256"
+          ],
+          "sbo": "SBO:0000176",
+          "seed.reaction": [
+            "rxn00799"
+          ]
+        }
+      }
+    },
+    {
+      "reaction_id": "MDH",
+      "model_direction": 1,
+      "source": "mal__L_c",
+      "target": "oaa_c",
+      "oriented_stoichiometry": {
+        "h_c": 1.0,
+        "mal__L_c": -1.0,
+        "nad_c": -1.0,
+        "nadh_c": 1.0,
+        "oaa_c": 1.0
+      },
+      "original_reaction": {
+        "id": "MDH",
+        "name": "Malate dehydrogenase",
+        "metabolites": {
+          "h_c": 1.0,
+          "mal__L_c": -1.0,
+          "nad_c": -1.0,
+          "nadh_c": 1.0,
+          "oaa_c": 1.0
+        },
+        "lower_bound": -1000.0,
+        "upper_bound": 1000.0,
+        "gene_reaction_rule": "b3236",
+        "subsystem": "Citric Acid Cycle",
+        "notes": {
+          "original_bigg_ids": [
+            "MDH"
+          ]
+        },
+        "annotation": {
+          "bigg.reaction": [
+            "MDH"
+          ],
+          "biocyc": [
+            "META:MALATE-DEH-RXN"
+          ],
+          "ec-code": [
+            "1.1.1.37",
+            "1.1.1.299"
+          ],
+          "kegg.reaction": [
+            "R00342"
+          ],
+          "metanetx.reaction": [
+            "MNXR101439"
+          ],
+          "reactome.reaction": [
+            "R-BTA-70979",
+            "R-BTA-198508",
+            "R-SCE-70979",
+            "R-GGA-70979",
+            "R-MMU-71783",
+            "R-RNO-71783",
+            "R-DDI-198508",
+            "R-CFA-71783",
+            "R-CFA-198508",
+            "R-ATH-70979",
+            "R-DME-198508",
+            "R-TGU-71783",
+            "R-HSA-71783",
+            "R-BTA-71783",
+            "R-DRE-198508",
+            "R-SPO-70979",
+            "R-GGA-71783",
+            "R-TGU-198508",
+            "R-GGA-372422",
+            "R-CEL-71783",
+            "R-XTR-70979",
+            "R-RNO-198508",
+            "R-MMU-70979",
+            "R-SPO-71783",
+            "R-ATH-71783",
+            "R-MMU-198508",
+            "R-DME-70979",
+            "R-TGU-70979",
+            "R-CEL-198508",
+            "R-DME-71783",
+            "R-DRE-70979",
+            "R-OSA-71783",
+            "R-SSC-198508",
+            "R-GGA-372855",
+            "R-SSC-70979",
+            "R-OSA-70979",
+            "R-GGA-373047",
+            "R-GGA-198508",
+            "R-SSC-71783",
+            "R-HSA-70979",
+            "R-CFA-70979",
+            "R-XTR-71783",
+            "R-HSA-198508",
+            "R-XTR-198508",
+            "R-SCE-71783",
+            "R-RNO-70979",
+            "R-DRE-71783",
+            "R-CEL-70979"
+          ],
+          "rhea": [
+            "21432",
+            "21433",
+            "21434",
+            "21435"
+          ],
+          "sabiork": [
+            "113"
+          ],
+          "sbo": "SBO:0000176",
+          "seed.reaction": [
+            "rxn00248"
+          ]
+        }
+      }
+    }
+  ],
+  "metabolites": [
+    {
+      "id": "oaa_c",
+      "name": "Oxaloacetate",
+      "compartment": "c",
+      "charge": -2,
+      "formula": "C4H2O5",
+      "notes": {
+        "original_bigg_ids": [
+          "oaa_c"
+        ]
+      },
+      "annotation": {
+        "bigg.metabolite": [
+          "oaa"
+        ],
+        "biocyc": [
+          "META:OXALACETIC_ACID"
+        ],
+        "chebi": [
+          "CHEBI:25731",
+          "CHEBI:24959",
+          "CHEBI:12820",
+          "CHEBI:16452",
+          "CHEBI:30744",
+          "CHEBI:14703",
+          "CHEBI:24958",
+          "CHEBI:7812",
+          "CHEBI:25734",
+          "CHEBI:29049"
+        ],
+        "envipath": [
+          "4fd7f3e0-dd25-43ac-9453-dda3e52396e4/compound/133a11f3-81b0-4384-837e-1ccdd0a2a645",
+          "650babc9-9d68-4b73-9332-11972ca26f7b/compound/40afaad4-431a-4e3c-b4c7-020dbe4bdd2a",
+          "32de3cf4-e3e6-4168-956e-32fa5ddb0ce1/compound/be7c543c-40bd-4698-9821-22f2e65c38f3"
+        ],
+        "hmdb": [
+          "HMDB00223"
+        ],
+        "inchi_key": [
+          "KHPXUQMNIQBQEV-UHFFFAOYSA-L"
+        ],
+        "kegg.compound": [
+          "C00036"
+        ],
+        "lipidmaps": [
+          "LMFA01170120"
+        ],
+        "metanetx.chemical": [
+          "MNXM46"
+        ],
+        "reactome.compound": [
+          "6810070",
+          "113587",
+          "76213"
+        ],
+        "sabiork": [
+          "1915"
+        ],
+        "sbo": "SBO:0000247",
+        "seed.compound": [
+          "cpd00032"
+        ]
+      }
+    },
+    {
+      "id": "cit_c",
+      "name": "Citrate",
+      "compartment": "c",
+      "charge": -3,
+      "formula": "C6H5O7",
+      "notes": {
+        "original_bigg_ids": [
+          "cit_c"
+        ]
+      },
+      "annotation": {
+        "bigg.metabolite": [
+          "cit"
+        ],
+        "biocyc": [
+          "META:CIT"
+        ],
+        "chebi": [
+          "CHEBI:35802",
+          "CHEBI:133748",
+          "CHEBI:35809",
+          "CHEBI:76049",
+          "CHEBI:41523",
+          "CHEBI:35810",
+          "CHEBI:30769",
+          "CHEBI:13999",
+          "CHEBI:23322",
+          "CHEBI:35808",
+          "CHEBI:42563",
+          "CHEBI:16947",
+          "CHEBI:132362",
+          "CHEBI:35804",
+          "CHEBI:23321",
+          "CHEBI:3727",
+          "CHEBI:35806"
+        ],
+        "hmdb": [
+          "HMDB00094"
+        ],
+        "inchi_key": [
+          "KRKNYBCHXYNGOX-UHFFFAOYSA-K"
+        ],
+        "kegg.compound": [
+          "C00158"
+        ],
+        "kegg.drug": [
+          "D00037"
+        ],
+        "metanetx.chemical": [
+          "MNXM131"
+        ],
+        "reactome.compound": [
+          "29654",
+          "433138",
+          "76190"
+        ],
+        "sabiork": [
+          "1952"
+        ],
+        "sbo": "SBO:0000247",
+        "seed.compound": [
+          "cpd00137"
+        ]
+      }
+    },
+    {
+      "id": "acon_C_c",
+      "name": "Cis-Aconitate",
+      "compartment": "c",
+      "charge": -3,
+      "formula": "C6H3O6",
+      "notes": {
+        "original_bigg_ids": [
+          "acon_C_c"
+        ]
+      },
+      "annotation": {
+        "bigg.metabolite": [
+          "acon_C"
+        ],
+        "biocyc": [
+          "META:CIS-ACONITATE"
+        ],
+        "chebi": [
+          "CHEBI:23306",
+          "CHEBI:16383",
+          "CHEBI:12798",
+          "CHEBI:32805",
+          "CHEBI:23308",
+          "CHEBI:10482"
+        ],
+        "envipath": [
+          "32de3cf4-e3e6-4168-956e-32fa5ddb0ce1/compound/643481e5-a35b-477e-8665-70f4dca66baa"
+        ],
+        "hmdb": [
+          "HMDB00461",
+          "HMDB00072"
+        ],
+        "inchi_key": [
+          "GTZCVFVGUGFEME-IWQZZHSRSA-K"
+        ],
+        "kegg.compound": [
+          "C00417"
+        ],
+        "metanetx.chemical": [
+          "MNXM813"
+        ],
+        "sabiork": [
+          "2043"
+        ],
+        "sbo": "SBO:0000247",
+        "seed.compound": [
+          "cpd00331"
+        ]
+      }
+    },
+    {
+      "id": "icit_c",
+      "name": "Isocitrate",
+      "compartment": "c",
+      "charge": -3,
+      "formula": "C6H5O7",
+      "notes": {
+        "original_bigg_ids": [
+          "icit_c"
+        ]
+      },
+      "annotation": {
+        "bigg.metabolite": [
+          "icit"
+        ],
+        "chebi": [
+          "CHEBI:16087",
+          "CHEBI:36454",
+          "CHEBI:5998",
+          "CHEBI:24886",
+          "CHEBI:36453",
+          "CHEBI:14465",
+          "CHEBI:30887",
+          "CHEBI:24884"
+        ],
+        "hmdb": [
+          "HMDB00193"
+        ],
+        "inchi_key": [
+          "ODBLHEXUDAPZAU-UHFFFAOYSA-K"
+        ],
+        "kegg.compound": [
+          "C00311"
+        ],
+        "metanetx.chemical": [
+          "MNXM89661"
+        ],
+        "sabiork": [
+          "2013"
+        ],
+        "sbo": "SBO:0000247",
+        "seed.compound": [
+          "cpd00260"
+        ]
+      }
+    },
+    {
+      "id": "akg_c",
+      "name": "2-Oxoglutarate",
+      "compartment": "c",
+      "charge": -2,
+      "formula": "C5H4O5",
+      "notes": {
+        "original_bigg_ids": [
+          "akg_c"
+        ]
+      },
+      "annotation": {
+        "bigg.metabolite": [
+          "akg"
+        ],
+        "biocyc": [
+          "META:2-KETOGLUTARATE"
+        ],
+        "chebi": [
+          "CHEBI:40661",
+          "CHEBI:16810",
+          "CHEBI:11638",
+          "CHEBI:30916",
+          "CHEBI:19749",
+          "CHEBI:1253",
+          "CHEBI:30915",
+          "CHEBI:19748"
+        ],
+        "envipath": [
+          "32de3cf4-e3e6-4168-956e-32fa5ddb0ce1/compound/5b0a94f6-d411-44fd-bcc1-fb79b4e697f5",
+          "4fd7f3e0-dd25-43ac-9453-dda3e52396e4/compound/6557f3f2-0ab8-494b-a865-8ce0eae788a9"
+        ],
+        "hmdb": [
+          "HMDB00208",
+          "HMDB02812",
+          "HMDB62781"
+        ],
+        "inchi_key": [
+          "KPGXRSRHYNQIFN-UHFFFAOYSA-L"
+        ],
+        "kegg.compound": [
+          "C00026"
+        ],
+        "metanetx.chemical": [
+          "MNXM20"
+        ],
+        "reactome.compound": [
+          "113594",
+          "561075",
+          "5278317",
+          "113671",
+          "29406",
+          "389537"
+        ],
+        "sabiork": [
+          "1922"
+        ],
+        "sbo": "SBO:0000247",
+        "seed.compound": [
+          "cpd00024"
+        ]
+      }
+    },
+    {
+      "id": "succoa_c",
+      "name": "Succinyl-CoA",
+      "compartment": "c",
+      "charge": -5,
+      "formula": "C25H35N7O19P3S",
+      "notes": {
+        "original_bigg_ids": [
+          "succoa_c"
+        ]
+      },
+      "annotation": {
+        "bigg.metabolite": [
+          "succoa"
+        ],
+        "biocyc": [
+          "META:SUC-COA"
+        ],
+        "chebi": [
+          "CHEBI:57292",
+          "CHEBI:10746",
+          "CHEBI:15127",
+          "CHEBI:15380",
+          "CHEBI:9310",
+          "CHEBI:45541",
+          "CHEBI:26811"
+        ],
+        "envipath": [
+          "32de3cf4-e3e6-4168-956e-32fa5ddb0ce1/compound/359075fb-98d9-458d-ba82-db4020e753f3"
+        ],
+        "hmdb": [
+          "HMDB01022"
+        ],
+        "inchi_key": [
+          "VNOYUJKHFWYWIR-ITIYDSSPSA-I"
+        ],
+        "kegg.compound": [
+          "C00091"
+        ],
+        "lipidmaps": [
+          "LMFA07050370"
+        ],
+        "metanetx.chemical": [
+          "MNXM92"
+        ],
+        "reactome.compound": [
+          "70958"
+        ],
+        "sabiork": [
+          "1931"
+        ],
+        "sbo": "SBO:0000247",
+        "seed.compound": [
+          "cpd00078"
+        ]
+      }
+    },
+    {
+      "id": "succ_c",
+      "name": "Succinate",
+      "compartment": "c",
+      "charge": -2,
+      "formula": "C4H4O4",
+      "notes": {
+        "original_bigg_ids": [
+          "succ_c"
+        ]
+      },
+      "annotation": {
+        "bigg.metabolite": [
+          "succ"
+        ],
+        "biocyc": [
+          "META:SUC"
+        ],
+        "chebi": [
+          "CHEBI:22941",
+          "CHEBI:26803",
+          "CHEBI:15741",
+          "CHEBI:132287",
+          "CHEBI:45639",
+          "CHEBI:30779",
+          "CHEBI:15125",
+          "CHEBI:22943",
+          "CHEBI:26807",
+          "CHEBI:9304",
+          "CHEBI:90372",
+          "CHEBI:30031"
+        ],
+        "envipath": [
+          "4fd7f3e0-dd25-43ac-9453-dda3e52396e4/compound/cc98aff0-7f64-4db4-9d59-de961c228496",
+          "5882df9c-dae1-4d80-a40e-db4724271456/compound/6377658b-03f6-4fed-a5bf-ff0f2389b693",
+          "650babc9-9d68-4b73-9332-11972ca26f7b/compound/600b74d3-8fe5-426d-bedf-291175bd23e4",
+          "32de3cf4-e3e6-4168-956e-32fa5ddb0ce1/compound/8fdfd425-4343-4bf2-8427-b2ffa57fdbd7"
+        ],
+        "hmdb": [
+          "HMDB00254"
+        ],
+        "inchi_key": [
+          "KDYFGRWQOYBRFD-UHFFFAOYSA-L"
+        ],
+        "kegg.compound": [
+          "C00042"
+        ],
+        "lipidmaps": [
+          "LMFA01170043"
+        ],
+        "metanetx.chemical": [
+          "MNXM25"
+        ],
+        "reactome.compound": [
+          "389583",
+          "5278787",
+          "159939",
+          "433123",
+          "29434",
+          "113536"
+        ],
+        "sabiork": [
+          "1924"
+        ],
+        "sbo": "SBO:0000247",
+        "seed.compound": [
+          "cpd00036"
+        ]
+      }
+    },
+    {
+      "id": "fum_c",
+      "name": "Fumarate",
+      "compartment": "c",
+      "charge": -2,
+      "formula": "C4H2O4",
+      "notes": {
+        "original_bigg_ids": [
+          "fum_c"
+        ]
+      },
+      "annotation": {
+        "bigg.metabolite": [
+          "fum"
+        ],
+        "biocyc": [
+          "META:FUM"
+        ],
+        "chebi": [
+          "CHEBI:36180",
+          "CHEBI:37155",
+          "CHEBI:42511",
+          "CHEBI:5190",
+          "CHEBI:18012",
+          "CHEBI:42743",
+          "CHEBI:22956",
+          "CHEBI:22957",
+          "CHEBI:24124",
+          "CHEBI:14284",
+          "CHEBI:37154",
+          "CHEBI:29806",
+          "CHEBI:22958",
+          "CHEBI:24122"
+        ],
+        "envipath": [
+          "32de3cf4-e3e6-4168-956e-32fa5ddb0ce1/compound/709035ec-4868-4de8-9095-06428f6be14b"
+        ],
+        "hmdb": [
+          "HMDB00134"
+        ],
+        "inchi_key": [
+          "VZCYOOQTPOCHFL-OWOJBTEDSA-L"
+        ],
+        "kegg.compound": [
+          "C00122"
+        ],
+        "kegg.drug": [
+          "D02308"
+        ],
+        "metanetx.chemical": [
+          "MNXM93"
+        ],
+        "reactome.compound": [
+          "113588",
+          "29586"
+        ],
+        "sabiork": [
+          "1910"
+        ],
+        "sbo": "SBO:0000247",
+        "seed.compound": [
+          "cpd00106"
+        ]
+      }
+    },
+    {
+      "id": "mal__L_c",
+      "name": "L-Malate",
+      "compartment": "c",
+      "charge": -2,
+      "formula": "C4H4O5",
+      "notes": {
+        "original_bigg_ids": [
+          "mal_L_c"
+        ]
+      },
+      "annotation": {
+        "bigg.metabolite": [
+          "mal__L"
+        ],
+        "biocyc": [
+          "META:MAL"
+        ],
+        "chebi": [
+          "CHEBI:15589",
+          "CHEBI:30797",
+          "CHEBI:423",
+          "CHEBI:18784",
+          "CHEBI:18785",
+          "CHEBI:13140",
+          "CHEBI:11066"
+        ],
+        "hmdb": [
+          "HMDB00156"
+        ],
+        "inchi_key": [
+          "BJEPYKJPYRNKOW-REOHCLBHSA-L"
+        ],
+        "kegg.compound": [
+          "C00149"
+        ],
+        "metanetx.chemical": [
+          "MNXM98"
+        ],
+        "reactome.compound": [
+          "198498",
+          "113544"
+        ],
+        "sabiork": [
+          "1918"
+        ],
+        "sbo": "SBO:0000247",
+        "seed.compound": [
+          "cpd00130"
+        ]
+      }
+    },
+    {
+      "id": "accoa_c",
+      "name": "Acetyl-CoA",
+      "compartment": "c",
+      "charge": -4,
+      "formula": "C23H34N7O17P3S",
+      "notes": {
+        "original_bigg_ids": [
+          "accoa_c"
+        ]
+      },
+      "annotation": {
+        "bigg.metabolite": [
+          "accoa"
+        ],
+        "biocyc": [
+          "META:ACETYL-COA"
+        ],
+        "chebi": [
+          "CHEBI:57288",
+          "CHEBI:22192",
+          "CHEBI:15351",
+          "CHEBI:13712",
+          "CHEBI:2408",
+          "CHEBI:40470"
+        ],
+        "envipath": [
+          "32de3cf4-e3e6-4168-956e-32fa5ddb0ce1/compound/57bd5e24-9d14-4b91-bc60-64c8ea6c2d11"
+        ],
+        "hmdb": [
+          "HMDB01206"
+        ],
+        "inchi_key": [
+          "ZSLZBFCDCINBPY-ZSJPKINUSA-J"
+        ],
+        "kegg.compound": [
+          "C00024"
+        ],
+        "lipidmaps": [
+          "LMFA07050029",
+          "LMFA07050281"
+        ],
+        "metanetx.chemical": [
+          "MNXM21"
+        ],
+        "reactome.compound": [
+          "727753",
+          "76183",
+          "113560",
+          "353123",
+          "113559"
+        ],
+        "sabiork": [
+          "1276"
+        ],
+        "sbo": "SBO:0000247",
+        "seed.compound": [
+          "cpd00022"
+        ],
+        "slm": [
+          "000000297"
+        ]
+      }
+    }
+  ],
+  "interpretation": "Nine cycle backbone vertices; acetyl-CoA is an input. Cofactors and byproducts are retained in full reaction stoichiometry. This is not an atom-mapped cycle or a flux ranking."
+}

@@ -1,0 +1,356 @@
+Sampling: affine dimension 24, 8 fixed reactions
+Sampling: 500/2000 samples per chain
+Sampling: 1000/2000 samples per chain
+Sampling: 1500/2000 samples per chain
+Sampling: 2000/2000 samples per chain
+Grid: initializing 122 nodes on 12 x 27 cells
+Grid: 122 nodes, 41 edges, 12 x 27, initial length 101
+Grid: initializing 122 nodes on 12 x 27 cells
+Grid: 122 nodes, 41 edges, 12 x 27, initial length 78
+{
+  "output": "/tmp/e_coli_core_recompute_c57jq3wv",
+  "selection": {
+    "coverage_percent": 100.0,
+    "eligible_reactions": 76,
+    "selected_reactions": 76,
+    "zero_tolerance": 1e-07,
+    "ranking": "Major pathways first, then descending abs(signed median flux) within each group; reaction ID breaks ties",
+    "major_eligible_reactions": 21,
+    "major_selected_reactions": 21,
+    "count_rule": "ceil(coverage / 100 * eligible_count); 0 gives empty map"
+  },
+  "sampling_passed": true,
+  "placement": {
+    "method": "Integer-coordinate MILP / SciPy HiGHS",
+    "solver_status": 1,
+    "solver_message": "Time limit reached. (HiGHS Status 13: model_status is Time limit reached; primal_status is None)",
+    "time_limit_seconds": 60,
+    "grid_cols": 12,
+    "grid_rows": 27,
+    "variables": 29890,
+    "constraints": 37120,
+    "objective": 78,
+    "objective_metric": "Sum of Manhattan lengths of unique orange incidence edges; shared edges counted once",
+    "optimality_proven": false,
+    "selected_solution": "validated heuristic incumbent",
+    "heuristic": {
+      "method": "Spectral assignment, seeded annealing, exhaustive swaps/empty moves",
+      "polishing_scope": "All grid cells",
+      "initial_length": 101,
+      "final_length": 78,
+      "initialization": "Validated previous placement"
+    },
+    "distinct_grid_points_verified": true,
+    "position_constraints": {
+      "top_left_node": "met:glc__D_e",
+      "top_left_position": [
+        1,
+        25
+      ],
+      "top_left_margin": 1,
+      "node_top_margins": {
+        "met:glc__D_e": 1,
+        "met:gln__L_c": 1,
+        "met:glu__L_c": 1,
+        "met:glu__L_e": 1,
+        "met:glx_c": 1,
+        "met:icit_c": 1,
+        "met:lac__D_c": 1,
+        "met:lac__D_e": 1,
+        "met:mal__L_c": 1,
+        "met:13dpg_c": 1,
+        "met:2pg_c": 1,
+        "met:3pg_c": 1,
+        "met:oaa_c": 1,
+        "met:pep_c": 1,
+        "met:6pgc_c": 1,
+        "met:6pgl_c": 1,
+        "met:ac_c": 1,
+        "met:pyr_c": 1,
+        "met:pyr_e": 1,
+        "met:r5p_c": 1,
+        "met:ru5p__D_c": 1,
+        "met:ac_e": 1,
+        "met:acald_c": 1,
+        "met:s7p_c": 1,
+        "met:acald_e": 1,
+        "met:accoa_c": 1,
+        "met:succ_c": 1,
+        "met:succ_e": 1,
+        "met:succoa_c": 1,
+        "met:acon_C_c": 1,
+        "met:xu5p__D_c": 1,
+        "met:actp_c": 1,
+        "met:akg_c": 1,
+        "met:akg_e": 1,
+        "met:cit_c": 1,
+        "met:dhap_c": 1,
+        "met:e4p_c": 1,
+        "met:etoh_c": 1,
+        "met:etoh_e": 1,
+        "met:f6p_c": 1,
+        "met:fdp_c": 1,
+        "met:for_c": 1,
+        "met:for_e": 1,
+        "met:fum_c": 1,
+        "met:g3p_c": 1,
+        "met:g6p_c": 1,
+        "rxn:PFK": 1,
+        "rxn:PFL": 1,
+        "rxn:PGI": 1,
+        "rxn:PGK": 1,
+        "rxn:PGL": 1,
+        "rxn:ACALD": 1,
+        "rxn:AKGt2r": 1,
+        "rxn:PGM": 1,
+        "rxn:ALCD2x": 1,
+        "rxn:ACALDt": 1,
+        "rxn:ACKr": 1,
+        "rxn:PPC": 1,
+        "rxn:ACONTa": 1,
+        "rxn:ACONTb": 1,
+        "rxn:ATPM": 1,
+        "rxn:PPCK": 1,
+        "rxn:ACt2r": 1,
+        "rxn:PPS": 1,
+        "rxn:ADK1": 1,
+        "rxn:AKGDH": 1,
+        "rxn:ATPS4r": 1,
+        "rxn:PTAr": 1,
+        "rxn:PYK": 1,
+        "rxn:BIOMASS_Ecoli_core_w_GAM": 1,
+        "rxn:PYRt2": 1,
+        "rxn:RPE": 1,
+        "rxn:CS": 1,
+        "rxn:RPI": 1,
+        "rxn:SUCCt2_2": 1,
+        "rxn:CYTBD": 1,
+        "rxn:D_LACt2": 1,
+        "rxn:ENO": 1,
+        "rxn:SUCCt3": 1,
+        "rxn:ETOHt2r": 1,
+        "rxn:SUCDi": 1,
+        "rxn:SUCOAS": 1,
+        "rxn:TALA": 1,
+        "rxn:THD2": 1,
+        "rxn:TKT1": 1,
+        "rxn:TKT2": 1,
+        "rxn:TPI": 1,
+        "rxn:FBA": 1,
+        "rxn:FBP": 1,
+        "rxn:FORt2": 1,
+        "rxn:FORt": 1,
+        "rxn:FRD7": 1,
+        "rxn:FUM": 1,
+        "rxn:G6PDH2r": 1,
+        "rxn:GAPD": 1,
+        "rxn:GLCpts": 1,
+        "rxn:GLNS": 1,
+        "rxn:GLUDy": 1,
+        "rxn:GLUN": 1,
+        "rxn:GLUSy": 1,
+        "rxn:GLUt2r": 1,
+        "rxn:GND": 1,
+        "rxn:ICDHyr": 1,
+        "rxn:ICL": 1,
+        "rxn:LDH_D": 1,
+        "rxn:MALS": 1,
+        "rxn:MDH": 1,
+        "rxn:ME1": 1,
+        "rxn:ME2": 1,
+        "rxn:NADH16": 1,
+        "rxn:NADTRHD": 1,
+        "rxn:PDH": 1
+      },
+      "boundary_node_ids": [
+        "rxn:EX_ac_e",
+        "rxn:EX_acald_e",
+        "rxn:EX_akg_e",
+        "rxn:EX_etoh_e",
+        "rxn:EX_for_e",
+        "rxn:EX_glc__D_e",
+        "rxn:EX_glu__L_e",
+        "rxn:EX_lac__D_e",
+        "rxn:EX_pyr_e",
+        "rxn:EX_succ_e"
+      ],
+      "exclusive_boundary": true,
+      "top_left_verified": true,
+      "boundary_nodes_verified": true,
+      "fixed_backbone_positions": {
+        "rxn:EX_glc__D_e": [
+          1,
+          26
+        ],
+        "met:glc__D_e": [
+          1,
+          25
+        ],
+        "rxn:GLCpts": [
+          1,
+          24
+        ],
+        "met:g6p_c": [
+          1,
+          23
+        ],
+        "rxn:PGI": [
+          1,
+          22
+        ],
+        "met:f6p_c": [
+          1,
+          21
+        ],
+        "rxn:PFK": [
+          1,
+          20
+        ],
+        "met:fdp_c": [
+          1,
+          19
+        ],
+        "rxn:FBA": [
+          1,
+          18
+        ],
+        "met:dhap_c": [
+          1,
+          17
+        ],
+        "rxn:TPI": [
+          1,
+          16
+        ],
+        "met:g3p_c": [
+          1,
+          15
+        ],
+        "rxn:GAPD": [
+          1,
+          14
+        ],
+        "met:13dpg_c": [
+          1,
+          13
+        ],
+        "rxn:PGK": [
+          1,
+          12
+        ],
+        "met:3pg_c": [
+          1,
+          11
+        ],
+        "rxn:PGM": [
+          1,
+          10
+        ],
+        "met:2pg_c": [
+          1,
+          9
+        ],
+        "rxn:ENO": [
+          1,
+          8
+        ],
+        "met:pep_c": [
+          1,
+          7
+        ],
+        "rxn:PYK": [
+          1,
+          6
+        ],
+        "met:pyr_c": [
+          1,
+          5
+        ],
+        "rxn:PDH": [
+          2,
+          5
+        ],
+        "met:accoa_c": [
+          3,
+          5
+        ],
+        "met:oaa_c": [
+          4,
+          6
+        ],
+        "rxn:CS": [
+          4,
+          5
+        ],
+        "met:cit_c": [
+          4,
+          4
+        ],
+        "rxn:ACONTa": [
+          4,
+          3
+        ],
+        "met:acon_C_c": [
+          4,
+          2
+        ],
+        "rxn:ACONTb": [
+          4,
+          1
+        ],
+        "met:icit_c": [
+          5,
+          1
+        ],
+        "rxn:ICDHyr": [
+          6,
+          1
+        ],
+        "met:akg_c": [
+          7,
+          1
+        ],
+        "rxn:AKGDH": [
+          9,
+          1
+        ],
+        "met:succoa_c": [
+          9,
+          2
+        ],
+        "rxn:SUCOAS": [
+          9,
+          3
+        ],
+        "met:succ_c": [
+          9,
+          4
+        ],
+        "rxn:SUCDi": [
+          9,
+          5
+        ],
+        "met:fum_c": [
+          9,
+          6
+        ],
+        "rxn:FUM": [
+          8,
+          6
+        ],
+        "met:mal__L_c": [
+          7,
+          6
+        ],
+        "rxn:MDH": [
+          6,
+          6
+        ]
+      },
+      "fixed_backbone_positions_verified": true
+    },
+    "fixed_network_solver_objective": 78,
+    "fixed_network_lower_bound": 41.0
+  },
+  "total_orthogonal_edge_length": 936.8000000000013
+}

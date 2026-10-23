@@ -1,0 +1,1755 @@
+{
+  "source_model": "/home/tamura/codex/drawing/public/models/e_coli_core.xml",
+  "source_model_sha256": "deb260e7fc6459b5636d095dc2f20668add20e6e6cfd4a01d432cac94838a0e9",
+  "selection": {
+    "coverage_percent": 100.0,
+    "eligible_reactions": 76,
+    "selected_reactions": 76,
+    "zero_tolerance": 1e-07,
+    "ranking": "Major pathways first, then descending abs(signed median flux) within each group; reaction ID breaks ties",
+    "major_eligible_reactions": 21,
+    "major_selected_reactions": 21,
+    "count_rule": "ceil(coverage / 100 * eligible_count); 0 gives empty map"
+  },
+  "sampling": {
+    "method": "Random-direction hit-and-run with discarded covariance adaptation",
+    "stationary_target": "Uniform volume in the affine feasible flux polytope",
+    "bounds_modified": false,
+    "objective_conditioning": false,
+    "seed": 0,
+    "chains": 4,
+    "samples_per_chain": 2000,
+    "total_samples": 8000,
+    "thinning": 100,
+    "burn_in": 10000,
+    "adaptation_phases": 4,
+    "affine_dimension": 24,
+    "fixed_reaction_ids": [
+      "EX_fru_e",
+      "EX_fum_e",
+      "EX_gln__L_e",
+      "EX_mal__L_e",
+      "FRUpts2",
+      "FUMt2_2",
+      "GLNabc",
+      "MALt2_2"
+    ],
+    "mass_balance_max_abs": 2.8883562208648073e-11,
+    "bound_violation_max": 1.0643990716297249e-13,
+    "max_split_rhat": 1.0066654763832312,
+    "min_effective_sample_size": 524.8162094643932,
+    "diagnostic_criteria": {
+      "max_split_rhat": 1.05,
+      "min_effective_sample_size": 100
+    },
+    "mixing_checks_passed": true,
+    "limitation": "Finite correlated MCMC samples, not proof of convergence; bounds and internal cycles affect medians.",
+    "model_sha256": "deb260e7fc6459b5636d095dc2f20668add20e6e6cfd4a01d432cac94838a0e9",
+    "samples_sha256": "c2d36deb660b85c763b1429d3c72e37729edd692fef89d6091ebc202e62765c3"
+  },
+  "placement": {
+    "method": "Integer-coordinate MILP / SciPy HiGHS",
+    "solver_status": 1,
+    "solver_message": "Time limit reached. (HiGHS Status 13: model_status is Time limit reached; primal_status is None)",
+    "time_limit_seconds": 60,
+    "grid_cols": 12,
+    "grid_rows": 27,
+    "variables": 29890,
+    "constraints": 37120,
+    "objective": 78,
+    "objective_metric": "Sum of Manhattan lengths of unique orange incidence edges; shared edges counted once",
+    "optimality_proven": false,
+    "selected_solution": "validated heuristic incumbent",
+    "heuristic": {
+      "method": "Spectral assignment, seeded annealing, exhaustive swaps/empty moves",
+      "polishing_scope": "All grid cells",
+      "initial_length": 101,
+      "final_length": 78,
+      "initialization": "Validated previous placement"
+    },
+    "distinct_grid_points_verified": true,
+    "position_constraints": {
+      "top_left_node": "met:glc__D_e",
+      "top_left_position": [
+        1,
+        25
+      ],
+      "top_left_margin": 1,
+      "node_top_margins": {
+        "met:glc__D_e": 1,
+        "met:gln__L_c": 1,
+        "met:glu__L_c": 1,
+        "met:glu__L_e": 1,
+        "met:glx_c": 1,
+        "met:icit_c": 1,
+        "met:lac__D_c": 1,
+        "met:lac__D_e": 1,
+        "met:mal__L_c": 1,
+        "met:13dpg_c": 1,
+        "met:2pg_c": 1,
+        "met:3pg_c": 1,
+        "met:oaa_c": 1,
+        "met:pep_c": 1,
+        "met:6pgc_c": 1,
+        "met:6pgl_c": 1,
+        "met:ac_c": 1,
+        "met:pyr_c": 1,
+        "met:pyr_e": 1,
+        "met:r5p_c": 1,
+        "met:ru5p__D_c": 1,
+        "met:ac_e": 1,
+        "met:acald_c": 1,
+        "met:s7p_c": 1,
+        "met:acald_e": 1,
+        "met:accoa_c": 1,
+        "met:succ_c": 1,
+        "met:succ_e": 1,
+        "met:succoa_c": 1,
+        "met:acon_C_c": 1,
+        "met:xu5p__D_c": 1,
+        "met:actp_c": 1,
+        "met:akg_c": 1,
+        "met:akg_e": 1,
+        "met:cit_c": 1,
+        "met:dhap_c": 1,
+        "met:e4p_c": 1,
+        "met:etoh_c": 1,
+        "met:etoh_e": 1,
+        "met:f6p_c": 1,
+        "met:fdp_c": 1,
+        "met:for_c": 1,
+        "met:for_e": 1,
+        "met:fum_c": 1,
+        "met:g3p_c": 1,
+        "met:g6p_c": 1,
+        "rxn:PFK": 1,
+        "rxn:PFL": 1,
+        "rxn:PGI": 1,
+        "rxn:PGK": 1,
+        "rxn:PGL": 1,
+        "rxn:ACALD": 1,
+        "rxn:AKGt2r": 1,
+        "rxn:PGM": 1,
+        "rxn:ALCD2x": 1,
+        "rxn:ACALDt": 1,
+        "rxn:ACKr": 1,
+        "rxn:PPC": 1,
+        "rxn:ACONTa": 1,
+        "rxn:ACONTb": 1,
+        "rxn:ATPM": 1,
+        "rxn:PPCK": 1,
+        "rxn:ACt2r": 1,
+        "rxn:PPS": 1,
+        "rxn:ADK1": 1,
+        "rxn:AKGDH": 1,
+        "rxn:ATPS4r": 1,
+        "rxn:PTAr": 1,
+        "rxn:PYK": 1,
+        "rxn:BIOMASS_Ecoli_core_w_GAM": 1,
+        "rxn:PYRt2": 1,
+        "rxn:RPE": 1,
+        "rxn:CS": 1,
+        "rxn:RPI": 1,
+        "rxn:SUCCt2_2": 1,
+        "rxn:CYTBD": 1,
+        "rxn:D_LACt2": 1,
+        "rxn:ENO": 1,
+        "rxn:SUCCt3": 1,
+        "rxn:ETOHt2r": 1,
+        "rxn:SUCDi": 1,
+        "rxn:SUCOAS": 1,
+        "rxn:TALA": 1,
+        "rxn:THD2": 1,
+        "rxn:TKT1": 1,
+        "rxn:TKT2": 1,
+        "rxn:TPI": 1,
+        "rxn:FBA": 1,
+        "rxn:FBP": 1,
+        "rxn:FORt2": 1,
+        "rxn:FORt": 1,
+        "rxn:FRD7": 1,
+        "rxn:FUM": 1,
+        "rxn:G6PDH2r": 1,
+        "rxn:GAPD": 1,
+        "rxn:GLCpts": 1,
+        "rxn:GLNS": 1,
+        "rxn:GLUDy": 1,
+        "rxn:GLUN": 1,
+        "rxn:GLUSy": 1,
+        "rxn:GLUt2r": 1,
+        "rxn:GND": 1,
+        "rxn:ICDHyr": 1,
+        "rxn:ICL": 1,
+        "rxn:LDH_D": 1,
+        "rxn:MALS": 1,
+        "rxn:MDH": 1,
+        "rxn:ME1": 1,
+        "rxn:ME2": 1,
+        "rxn:NADH16": 1,
+        "rxn:NADTRHD": 1,
+        "rxn:PDH": 1
+      },
+      "boundary_node_ids": [
+        "rxn:EX_ac_e",
+        "rxn:EX_acald_e",
+        "rxn:EX_akg_e",
+        "rxn:EX_etoh_e",
+        "rxn:EX_for_e",
+        "rxn:EX_glc__D_e",
+        "rxn:EX_glu__L_e",
+        "rxn:EX_lac__D_e",
+        "rxn:EX_pyr_e",
+        "rxn:EX_succ_e"
+      ],
+      "exclusive_boundary": true,
+      "top_left_verified": true,
+      "boundary_nodes_verified": true,
+      "fixed_backbone_positions": {
+        "rxn:EX_glc__D_e": [
+          1,
+          26
+        ],
+        "met:glc__D_e": [
+          1,
+          25
+        ],
+        "rxn:GLCpts": [
+          1,
+          24
+        ],
+        "met:g6p_c": [
+          1,
+          23
+        ],
+        "rxn:PGI": [
+          1,
+          22
+        ],
+        "met:f6p_c": [
+          1,
+          21
+        ],
+        "rxn:PFK": [
+          1,
+          20
+        ],
+        "met:fdp_c": [
+          1,
+          19
+        ],
+        "rxn:FBA": [
+          1,
+          18
+        ],
+        "met:dhap_c": [
+          1,
+          17
+        ],
+        "rxn:TPI": [
+          1,
+          16
+        ],
+        "met:g3p_c": [
+          1,
+          15
+        ],
+        "rxn:GAPD": [
+          1,
+          14
+        ],
+        "met:13dpg_c": [
+          1,
+          13
+        ],
+        "rxn:PGK": [
+          1,
+          12
+        ],
+        "met:3pg_c": [
+          1,
+          11
+        ],
+        "rxn:PGM": [
+          1,
+          10
+        ],
+        "met:2pg_c": [
+          1,
+          9
+        ],
+        "rxn:ENO": [
+          1,
+          8
+        ],
+        "met:pep_c": [
+          1,
+          7
+        ],
+        "rxn:PYK": [
+          1,
+          6
+        ],
+        "met:pyr_c": [
+          1,
+          5
+        ],
+        "rxn:PDH": [
+          2,
+          5
+        ],
+        "met:accoa_c": [
+          3,
+          5
+        ],
+        "met:oaa_c": [
+          4,
+          6
+        ],
+        "rxn:CS": [
+          4,
+          5
+        ],
+        "met:cit_c": [
+          4,
+          4
+        ],
+        "rxn:ACONTa": [
+          4,
+          3
+        ],
+        "met:acon_C_c": [
+          4,
+          2
+        ],
+        "rxn:ACONTb": [
+          4,
+          1
+        ],
+        "met:icit_c": [
+          5,
+          1
+        ],
+        "rxn:ICDHyr": [
+          6,
+          1
+        ],
+        "met:akg_c": [
+          7,
+          1
+        ],
+        "rxn:AKGDH": [
+          9,
+          1
+        ],
+        "met:succoa_c": [
+          9,
+          2
+        ],
+        "rxn:SUCOAS": [
+          9,
+          3
+        ],
+        "met:succ_c": [
+          9,
+          4
+        ],
+        "rxn:SUCDi": [
+          9,
+          5
+        ],
+        "met:fum_c": [
+          9,
+          6
+        ],
+        "rxn:FUM": [
+          8,
+          6
+        ],
+        "met:mal__L_c": [
+          7,
+          6
+        ],
+        "rxn:MDH": [
+          6,
+          6
+        ]
+      },
+      "fixed_backbone_positions_verified": true
+    },
+    "fixed_network_solver_objective": 78,
+    "fixed_network_lower_bound": 41.0
+  },
+  "major_backbones": {
+    "routes": [
+      {
+        "family": "EMP",
+        "metabolite_ids": [
+          "glc__D_e",
+          "g6p_c",
+          "f6p_c",
+          "fdp_c",
+          "dhap_c",
+          "g3p_c",
+          "13dpg_c",
+          "3pg_c",
+          "2pg_c",
+          "pep_c",
+          "pyr_c"
+        ],
+        "reaction_ids": [
+          "GLCpts",
+          "PGI",
+          "PFK",
+          "FBA",
+          "TPI",
+          "GAPD",
+          "PGK",
+          "PGM",
+          "ENO",
+          "PYK"
+        ],
+        "steps": [
+          {
+            "source": "glc__D_e",
+            "target": "g6p_c",
+            "reaction_id": "GLCpts",
+            "direction": 1,
+            "organic_roles": [
+              "g6p",
+              "glc__D",
+              "pep",
+              "pyr"
+            ],
+            "reference_penalty": 0
+          },
+          {
+            "source": "g6p_c",
+            "target": "f6p_c",
+            "reaction_id": "PGI",
+            "direction": 1,
+            "organic_roles": [
+              "f6p",
+              "g6p"
+            ],
+            "reference_penalty": 0
+          },
+          {
+            "source": "f6p_c",
+            "target": "fdp_c",
+            "reaction_id": "PFK",
+            "direction": 1,
+            "organic_roles": [
+              "f6p",
+              "fdp"
+            ],
+            "reference_penalty": 0
+          },
+          {
+            "source": "fdp_c",
+            "target": "dhap_c",
+            "reaction_id": "FBA",
+            "direction": 1,
+            "organic_roles": [
+              "dhap",
+              "fdp",
+              "g3p"
+            ],
+            "reference_penalty": 0
+          },
+          {
+            "source": "dhap_c",
+            "target": "g3p_c",
+            "reaction_id": "TPI",
+            "direction": 1,
+            "organic_roles": [
+              "dhap",
+              "g3p"
+            ],
+            "reference_penalty": 0
+          },
+          {
+            "source": "g3p_c",
+            "target": "13dpg_c",
+            "reaction_id": "GAPD",
+            "direction": 1,
+            "organic_roles": [
+              "13dpg",
+              "g3p"
+            ],
+            "reference_penalty": 0
+          },
+          {
+            "source": "13dpg_c",
+            "target": "3pg_c",
+            "reaction_id": "PGK",
+            "direction": -1,
+            "organic_roles": [
+              "13dpg",
+              "3pg"
+            ],
+            "reference_penalty": 0
+          },
+          {
+            "source": "3pg_c",
+            "target": "2pg_c",
+            "reaction_id": "PGM",
+            "direction": -1,
+            "organic_roles": [
+              "2pg",
+              "3pg"
+            ],
+            "reference_penalty": 0
+          },
+          {
+            "source": "2pg_c",
+            "target": "pep_c",
+            "reaction_id": "ENO",
+            "direction": 1,
+            "organic_roles": [
+              "2pg",
+              "pep"
+            ],
+            "reference_penalty": 0
+          },
+          {
+            "source": "pep_c",
+            "target": "pyr_c",
+            "reaction_id": "PYK",
+            "direction": 1,
+            "organic_roles": [
+              "pep",
+              "pyr"
+            ],
+            "reference_penalty": 0
+          }
+        ],
+        "pattern": [
+          "glc__D",
+          "g6p",
+          "f6p",
+          "fdp",
+          "dhap",
+          "g3p",
+          "13dpg",
+          "3pg",
+          "2pg",
+          "pep",
+          "pyr"
+        ],
+        "search_states": 11,
+        "id": "glycolysis",
+        "name": "Glucose to pyruvate (EMP)",
+        "shape": "vertical",
+        "closed": false,
+        "exchange_reaction_id": "EX_glc__D_e",
+        "evidence": "Reference chemical-role pattern + actual directed source-model incidences",
+        "flux_feasibility_proven": false,
+        "model_roles": {
+          "glc__D_e": "glc__D",
+          "g6p_c": "g6p",
+          "f6p_c": "f6p",
+          "fdp_c": "fdp",
+          "dhap_c": "dhap",
+          "g3p_c": "g3p",
+          "13dpg_c": "13dpg",
+          "3pg_c": "3pg",
+          "2pg_c": "2pg",
+          "pep_c": "pep",
+          "pyr_c": "pyr"
+        },
+        "node_offsets": {
+          "rxn:EX_glc__D_e": [
+            1,
+            0
+          ],
+          "met:glc__D_e": [
+            1,
+            -1
+          ],
+          "rxn:GLCpts": [
+            1,
+            -2
+          ],
+          "met:g6p_c": [
+            1,
+            -3
+          ],
+          "rxn:PGI": [
+            1,
+            -4
+          ],
+          "met:f6p_c": [
+            1,
+            -5
+          ],
+          "rxn:PFK": [
+            1,
+            -6
+          ],
+          "met:fdp_c": [
+            1,
+            -7
+          ],
+          "rxn:FBA": [
+            1,
+            -8
+          ],
+          "met:dhap_c": [
+            1,
+            -9
+          ],
+          "rxn:TPI": [
+            1,
+            -10
+          ],
+          "met:g3p_c": [
+            1,
+            -11
+          ],
+          "rxn:GAPD": [
+            1,
+            -12
+          ],
+          "met:13dpg_c": [
+            1,
+            -13
+          ],
+          "rxn:PGK": [
+            1,
+            -14
+          ],
+          "met:3pg_c": [
+            1,
+            -15
+          ],
+          "rxn:PGM": [
+            1,
+            -16
+          ],
+          "met:2pg_c": [
+            1,
+            -17
+          ],
+          "rxn:ENO": [
+            1,
+            -18
+          ],
+          "met:pep_c": [
+            1,
+            -19
+          ],
+          "rxn:PYK": [
+            1,
+            -20
+          ],
+          "met:pyr_c": [
+            1,
+            -21
+          ]
+        },
+        "displayed_node_ids": [
+          "rxn:EX_glc__D_e",
+          "met:glc__D_e",
+          "rxn:GLCpts",
+          "met:g6p_c",
+          "rxn:PGI",
+          "met:f6p_c",
+          "rxn:PFK",
+          "met:fdp_c",
+          "rxn:FBA",
+          "met:dhap_c",
+          "rxn:TPI",
+          "met:g3p_c",
+          "rxn:GAPD",
+          "met:13dpg_c",
+          "rxn:PGK",
+          "met:3pg_c",
+          "rxn:PGM",
+          "met:2pg_c",
+          "rxn:ENO",
+          "met:pep_c",
+          "rxn:PYK",
+          "met:pyr_c"
+        ],
+        "displayed_reaction_ids": [
+          "GLCpts",
+          "PGI",
+          "PFK",
+          "FBA",
+          "TPI",
+          "GAPD",
+          "PGK",
+          "PGM",
+          "ENO",
+          "PYK"
+        ]
+      },
+      {
+        "id": "glucose_exchange",
+        "name": "Glucose exchange",
+        "shape": "exchange",
+        "metabolite_ids": [
+          "glc__D_e"
+        ],
+        "reaction_ids": [
+          "EX_glc__D_e"
+        ],
+        "steps": [],
+        "closed": false,
+        "evidence": "Reference chemical-role pattern + actual directed source-model incidences",
+        "flux_feasibility_proven": false,
+        "model_roles": {
+          "glc__D_e": "glc__D"
+        },
+        "node_offsets": {
+          "rxn:EX_glc__D_e": [
+            1,
+            0
+          ],
+          "met:glc__D_e": [
+            1,
+            -1
+          ]
+        },
+        "displayed_node_ids": [
+          "rxn:EX_glc__D_e",
+          "met:glc__D_e"
+        ],
+        "displayed_reaction_ids": [
+          "EX_glc__D_e"
+        ]
+      },
+      {
+        "metabolite_ids": [
+          "pyr_c",
+          "accoa_c"
+        ],
+        "reaction_ids": [
+          "PDH"
+        ],
+        "steps": [
+          {
+            "source": "pyr_c",
+            "target": "accoa_c",
+            "reaction_id": "PDH",
+            "direction": 1,
+            "organic_roles": [
+              "accoa",
+              "pyr"
+            ],
+            "reference_penalty": 0
+          }
+        ],
+        "pattern": [
+          "pyr",
+          "accoa"
+        ],
+        "search_states": 2,
+        "id": "pdh",
+        "name": "Pyruvate to acetyl-CoA (model reaction)",
+        "shape": "horizontal",
+        "closed": false,
+        "evidence": "Reference chemical-role pattern + actual directed source-model incidences",
+        "flux_feasibility_proven": false,
+        "model_roles": {
+          "pyr_c": "pyr",
+          "accoa_c": "accoa"
+        },
+        "node_offsets": {
+          "met:pyr_c": [
+            1,
+            -21
+          ],
+          "rxn:PDH": [
+            2,
+            -21
+          ],
+          "met:accoa_c": [
+            3,
+            -21
+          ]
+        },
+        "displayed_node_ids": [
+          "met:pyr_c",
+          "rxn:PDH",
+          "met:accoa_c"
+        ],
+        "displayed_reaction_ids": [
+          "PDH"
+        ]
+      },
+      {
+        "metabolite_ids": [
+          "oaa_c",
+          "cit_c",
+          "acon_C_c",
+          "icit_c",
+          "akg_c",
+          "succoa_c",
+          "succ_c",
+          "fum_c",
+          "mal__L_c",
+          "oaa_c"
+        ],
+        "reaction_ids": [
+          "CS",
+          "ACONTa",
+          "ACONTb",
+          "ICDHyr",
+          "AKGDH",
+          "SUCOAS",
+          "SUCDi",
+          "FUM",
+          "MDH"
+        ],
+        "steps": [
+          {
+            "source": "oaa_c",
+            "target": "cit_c",
+            "reaction_id": "CS",
+            "direction": 1,
+            "organic_roles": [
+              "accoa",
+              "cit",
+              "oaa"
+            ],
+            "reference_penalty": 0
+          },
+          {
+            "source": "cit_c",
+            "target": "acon_C_c",
+            "reaction_id": "ACONTa",
+            "direction": 1,
+            "organic_roles": [
+              "acon_C",
+              "cit"
+            ],
+            "reference_penalty": 0
+          },
+          {
+            "source": "acon_C_c",
+            "target": "icit_c",
+            "reaction_id": "ACONTb",
+            "direction": 1,
+            "organic_roles": [
+              "acon_C",
+              "icit"
+            ],
+            "reference_penalty": 0
+          },
+          {
+            "source": "icit_c",
+            "target": "akg_c",
+            "reaction_id": "ICDHyr",
+            "direction": 1,
+            "organic_roles": [
+              "akg",
+              "icit"
+            ],
+            "reference_penalty": 0
+          },
+          {
+            "source": "akg_c",
+            "target": "succoa_c",
+            "reaction_id": "AKGDH",
+            "direction": 1,
+            "organic_roles": [
+              "akg",
+              "succoa"
+            ],
+            "reference_penalty": 0
+          },
+          {
+            "source": "succoa_c",
+            "target": "succ_c",
+            "reaction_id": "SUCOAS",
+            "direction": -1,
+            "organic_roles": [
+              "succ",
+              "succoa"
+            ],
+            "reference_penalty": 0
+          },
+          {
+            "source": "succ_c",
+            "target": "fum_c",
+            "reaction_id": "SUCDi",
+            "direction": 1,
+            "organic_roles": [
+              "fum",
+              "succ"
+            ],
+            "reference_penalty": 0
+          },
+          {
+            "source": "fum_c",
+            "target": "mal__L_c",
+            "reaction_id": "FUM",
+            "direction": 1,
+            "organic_roles": [
+              "fum",
+              "mal__L"
+            ],
+            "reference_penalty": 0
+          },
+          {
+            "source": "mal__L_c",
+            "target": "oaa_c",
+            "reaction_id": "MDH",
+            "direction": 1,
+            "organic_roles": [
+              "mal__L",
+              "oaa"
+            ],
+            "reference_penalty": 0
+          }
+        ],
+        "pattern": [
+          "oaa",
+          "cit",
+          "acon_C",
+          "icit",
+          "akg",
+          "succoa",
+          "succ",
+          "fum",
+          "mal__L",
+          "oaa"
+        ],
+        "search_states": 12,
+        "id": "tca",
+        "name": "Directed model-local TCA cycle",
+        "shape": "square",
+        "closed": true,
+        "evidence": "Reference chemical-role pattern + actual directed source-model incidences",
+        "flux_feasibility_proven": false,
+        "model_roles": {
+          "oaa_c": "oaa",
+          "cit_c": "cit",
+          "acon_C_c": "acon_C",
+          "icit_c": "icit",
+          "akg_c": "akg",
+          "succoa_c": "succoa",
+          "succ_c": "succ",
+          "fum_c": "fum",
+          "mal__L_c": "mal__L"
+        },
+        "node_offsets": {
+          "met:oaa_c": [
+            4,
+            -20
+          ],
+          "rxn:CS": [
+            4,
+            -21
+          ],
+          "met:cit_c": [
+            4,
+            -22
+          ],
+          "rxn:ACONTa": [
+            4,
+            -23
+          ],
+          "met:acon_C_c": [
+            4,
+            -24
+          ],
+          "rxn:ACONTb": [
+            4,
+            -25
+          ],
+          "met:icit_c": [
+            5,
+            -25
+          ],
+          "rxn:ICDHyr": [
+            6,
+            -25
+          ],
+          "met:akg_c": [
+            7,
+            -25
+          ],
+          "rxn:AKGDH": [
+            9,
+            -25
+          ],
+          "met:succoa_c": [
+            9,
+            -24
+          ],
+          "rxn:SUCOAS": [
+            9,
+            -23
+          ],
+          "met:succ_c": [
+            9,
+            -22
+          ],
+          "rxn:SUCDi": [
+            9,
+            -21
+          ],
+          "met:fum_c": [
+            9,
+            -20
+          ],
+          "rxn:FUM": [
+            8,
+            -20
+          ],
+          "met:mal__L_c": [
+            7,
+            -20
+          ],
+          "rxn:MDH": [
+            6,
+            -20
+          ]
+        },
+        "displayed_node_ids": [
+          "met:oaa_c",
+          "rxn:CS",
+          "met:cit_c",
+          "rxn:ACONTa",
+          "met:acon_C_c",
+          "rxn:ACONTb",
+          "met:icit_c",
+          "rxn:ICDHyr",
+          "met:akg_c",
+          "rxn:AKGDH",
+          "met:succoa_c",
+          "rxn:SUCOAS",
+          "met:succ_c",
+          "rxn:SUCDi",
+          "met:fum_c",
+          "rxn:FUM",
+          "met:mal__L_c",
+          "rxn:MDH"
+        ],
+        "displayed_reaction_ids": [
+          "CS",
+          "ACONTa",
+          "ACONTb",
+          "ICDHyr",
+          "AKGDH",
+          "SUCOAS",
+          "SUCDi",
+          "FUM",
+          "MDH"
+        ]
+      }
+    ],
+    "square": {
+      "left": 4,
+      "top_offset": -20,
+      "side_length": 5,
+      "closed": true
+    },
+    "color": "#d62728",
+    "fixed_node_offsets": {
+      "rxn:EX_glc__D_e": [
+        1,
+        0
+      ],
+      "met:glc__D_e": [
+        1,
+        -1
+      ],
+      "rxn:GLCpts": [
+        1,
+        -2
+      ],
+      "met:g6p_c": [
+        1,
+        -3
+      ],
+      "rxn:PGI": [
+        1,
+        -4
+      ],
+      "met:f6p_c": [
+        1,
+        -5
+      ],
+      "rxn:PFK": [
+        1,
+        -6
+      ],
+      "met:fdp_c": [
+        1,
+        -7
+      ],
+      "rxn:FBA": [
+        1,
+        -8
+      ],
+      "met:dhap_c": [
+        1,
+        -9
+      ],
+      "rxn:TPI": [
+        1,
+        -10
+      ],
+      "met:g3p_c": [
+        1,
+        -11
+      ],
+      "rxn:GAPD": [
+        1,
+        -12
+      ],
+      "met:13dpg_c": [
+        1,
+        -13
+      ],
+      "rxn:PGK": [
+        1,
+        -14
+      ],
+      "met:3pg_c": [
+        1,
+        -15
+      ],
+      "rxn:PGM": [
+        1,
+        -16
+      ],
+      "met:2pg_c": [
+        1,
+        -17
+      ],
+      "rxn:ENO": [
+        1,
+        -18
+      ],
+      "met:pep_c": [
+        1,
+        -19
+      ],
+      "rxn:PYK": [
+        1,
+        -20
+      ],
+      "met:pyr_c": [
+        1,
+        -21
+      ],
+      "rxn:PDH": [
+        2,
+        -21
+      ],
+      "met:accoa_c": [
+        3,
+        -21
+      ],
+      "met:oaa_c": [
+        4,
+        -20
+      ],
+      "rxn:CS": [
+        4,
+        -21
+      ],
+      "met:cit_c": [
+        4,
+        -22
+      ],
+      "rxn:ACONTa": [
+        4,
+        -23
+      ],
+      "met:acon_C_c": [
+        4,
+        -24
+      ],
+      "rxn:ACONTb": [
+        4,
+        -25
+      ],
+      "met:icit_c": [
+        5,
+        -25
+      ],
+      "rxn:ICDHyr": [
+        6,
+        -25
+      ],
+      "met:akg_c": [
+        7,
+        -25
+      ],
+      "rxn:AKGDH": [
+        9,
+        -25
+      ],
+      "met:succoa_c": [
+        9,
+        -24
+      ],
+      "rxn:SUCOAS": [
+        9,
+        -23
+      ],
+      "met:succ_c": [
+        9,
+        -22
+      ],
+      "rxn:SUCDi": [
+        9,
+        -21
+      ],
+      "met:fum_c": [
+        9,
+        -20
+      ],
+      "rxn:FUM": [
+        8,
+        -20
+      ],
+      "met:mal__L_c": [
+        7,
+        -20
+      ],
+      "rxn:MDH": [
+        6,
+        -20
+      ]
+    },
+    "glucose_top_margin": 1,
+    "geometry_scope": "Displayed source-model nodes only; no missing edge is synthesized",
+    "skipped_routes": [],
+    "exchange_connectors": {
+      "color": "#f28e2b",
+      "edge_indices": [
+        4,
+        6,
+        16,
+        17,
+        21,
+        22,
+        25,
+        26,
+        29,
+        30,
+        31,
+        32,
+        47,
+        48,
+        63,
+        64,
+        70,
+        81,
+        90,
+        91,
+        100,
+        101,
+        104,
+        105,
+        110,
+        111,
+        139,
+        140,
+        141,
+        142,
+        143,
+        145,
+        146,
+        147,
+        148,
+        156,
+        157,
+        191,
+        192,
+        204,
+        207
+      ],
+      "root_node_ids": [
+        "met:13dpg_c",
+        "met:2pg_c",
+        "met:3pg_c",
+        "met:accoa_c",
+        "met:acon_C_c",
+        "met:akg_c",
+        "met:cit_c",
+        "met:dhap_c",
+        "met:f6p_c",
+        "met:fdp_c",
+        "met:fum_c",
+        "met:g3p_c",
+        "met:g6p_c",
+        "met:glc__D_e",
+        "met:icit_c",
+        "met:mal__L_c",
+        "met:oaa_c",
+        "met:pep_c",
+        "met:pyr_c",
+        "met:succ_c",
+        "met:succoa_c",
+        "rxn:ACONTa",
+        "rxn:ACONTb",
+        "rxn:AKGDH",
+        "rxn:CS",
+        "rxn:ENO",
+        "rxn:EX_glc__D_e",
+        "rxn:FBA",
+        "rxn:FUM",
+        "rxn:GAPD",
+        "rxn:GLCpts",
+        "rxn:ICDHyr",
+        "rxn:MDH",
+        "rxn:PDH",
+        "rxn:PFK",
+        "rxn:PGI",
+        "rxn:PGK",
+        "rxn:PGM",
+        "rxn:PYK",
+        "rxn:SUCDi",
+        "rxn:SUCOAS",
+        "rxn:TPI"
+      ],
+      "exchange_paths": {
+        "rxn:EX_ac_e": [
+          "met:accoa_c",
+          "rxn:PTAr",
+          "met:actp_c",
+          "rxn:ACKr",
+          "met:ac_c",
+          "rxn:ACt2r",
+          "met:ac_e",
+          "rxn:EX_ac_e"
+        ],
+        "rxn:EX_acald_e": [
+          "met:accoa_c",
+          "rxn:ACALD",
+          "met:acald_c",
+          "rxn:ACALDt",
+          "met:acald_e",
+          "rxn:EX_acald_e"
+        ],
+        "rxn:EX_akg_e": [
+          "met:akg_c",
+          "rxn:AKGt2r",
+          "met:akg_e",
+          "rxn:EX_akg_e"
+        ],
+        "rxn:EX_etoh_e": [
+          "met:accoa_c",
+          "rxn:ACALD",
+          "met:acald_c",
+          "rxn:ALCD2x",
+          "met:etoh_c",
+          "rxn:ETOHt2r",
+          "met:etoh_e",
+          "rxn:EX_etoh_e"
+        ],
+        "rxn:EX_for_e": [
+          "met:accoa_c",
+          "rxn:PFL",
+          "met:for_c",
+          "rxn:FORt",
+          "met:for_e",
+          "rxn:EX_for_e"
+        ],
+        "rxn:EX_glc__D_e": [
+          "rxn:EX_glc__D_e"
+        ],
+        "rxn:EX_glu__L_e": [
+          "met:3pg_c",
+          "rxn:BIOMASS_Ecoli_core_w_GAM",
+          "met:glu__L_c",
+          "rxn:GLUt2r",
+          "met:glu__L_e",
+          "rxn:EX_glu__L_e"
+        ],
+        "rxn:EX_lac__D_e": [
+          "met:pyr_c",
+          "rxn:LDH_D",
+          "met:lac__D_c",
+          "rxn:D_LACt2",
+          "met:lac__D_e",
+          "rxn:EX_lac__D_e"
+        ],
+        "rxn:EX_pyr_e": [
+          "met:pyr_c",
+          "rxn:PYRt2",
+          "met:pyr_e",
+          "rxn:EX_pyr_e"
+        ],
+        "rxn:EX_succ_e": [
+          "met:succ_c",
+          "rxn:SUCCt2_2",
+          "met:succ_e",
+          "rxn:EX_succ_e"
+        ]
+      },
+      "all_exchanges_connected": true,
+      "disconnected_exchange_node_ids": [],
+      "connectivity": "Undirected displayed stoichiometric incidence; coenzyme copies excluded; red backbone allowed",
+      "objective": "Sum of Manhattan lengths of unique orange incidence edges; shared edges counted once",
+      "method": "Greedy shared shortest-path forest alternating with constrained grid placement",
+      "global_optimality_proven": false,
+      "total_length": 78,
+      "shared_coenzyme_ids": [],
+      "optimization_history": [
+        {
+          "iteration": 1,
+          "before_reroute": 101,
+          "orange_length": 101,
+          "optimized_fixed_network_length": 101
+        },
+        {
+          "iteration": 2,
+          "before_reroute": 78,
+          "orange_length": 78,
+          "optimized_fixed_network_length": 78
+        }
+      ]
+    },
+    "validation": {
+      "all_displayed_backbone_positions_verified": true,
+      "routes": [
+        {
+          "id": "glycolysis",
+          "shape": "vertical",
+          "checked_nodes": 22,
+          "verified": true
+        },
+        {
+          "id": "glucose_exchange",
+          "shape": "exchange",
+          "checked_nodes": 2,
+          "verified": true
+        },
+        {
+          "id": "pdh",
+          "shape": "horizontal",
+          "checked_nodes": 3,
+          "verified": true
+        },
+        {
+          "id": "tca",
+          "shape": "square",
+          "checked_nodes": 18,
+          "verified": true
+        }
+      ]
+    }
+  },
+  "source_reactions": 95,
+  "drawn_reactions": 76,
+  "grid_nodes": 122,
+  "coenzyme_copies": 84,
+  "edges": 237,
+  "glucose_metabolite_id": "glc__D_e",
+  "glucose_anchor_active": true,
+  "glucose_reference_only": false,
+  "exchange_reaction_ids": [
+    "EX_ac_e",
+    "EX_acald_e",
+    "EX_akg_e",
+    "EX_etoh_e",
+    "EX_for_e",
+    "EX_glc__D_e",
+    "EX_glu__L_e",
+    "EX_lac__D_e",
+    "EX_pyr_e",
+    "EX_succ_e"
+  ],
+  "total_orthogonal_edge_length": 936.8000000000013,
+  "coenzyme_edge_length": 37.800000000000004,
+  "inorganic_metabolites": [
+    "h2o_c",
+    "h2o_e",
+    "h_c",
+    "h_e",
+    "nh4_c",
+    "nh4_e",
+    "o2_c",
+    "o2_e",
+    "pi_c",
+    "pi_e",
+    "co2_c",
+    "co2_e"
+  ],
+  "validation": {
+    "all_noncoenzyme_nodes_on_distinct_grid_points": true,
+    "no_inorganic_nodes": true,
+    "glucose_top_left_verified": true,
+    "exchange_reactions_on_perimeter": true,
+    "all_nodes_within_grid_rectangle": true,
+    "major_backbones": {
+      "all_displayed_backbone_positions_verified": true,
+      "routes": [
+        {
+          "id": "glycolysis",
+          "shape": "vertical",
+          "checked_nodes": 22,
+          "verified": true
+        },
+        {
+          "id": "glucose_exchange",
+          "shape": "exchange",
+          "checked_nodes": 2,
+          "verified": true
+        },
+        {
+          "id": "pdh",
+          "shape": "horizontal",
+          "checked_nodes": 3,
+          "verified": true
+        },
+        {
+          "id": "tca",
+          "shape": "square",
+          "checked_nodes": 18,
+          "verified": true
+        }
+      ]
+    },
+    "no_zero_median_reactions": true,
+    "visible_stoichiometry_preserved": true,
+    "full_model_used_for_sampling": true,
+    "network": {
+      "all_reactions_preserved": true,
+      "stoichiometry_preserved": true,
+      "directions_verified": true,
+      "bipartite": true,
+      "currency_copies_degree_one": true,
+      "reactions": 76,
+      "incidence_edges": 237
+    },
+    "escher": {
+      "schema_valid": true,
+      "metadata_embedded": true,
+      "reaction_ids_preserved": true,
+      "stoichiometry_preserved": true,
+      "coordinate_transform_verified": true,
+      "segment_endpoints_verified": true,
+      "nodes": 206,
+      "reactions": 76,
+      "segments": 237,
+      "primary_metabolites": 46,
+      "secondary_metabolites": 84,
+      "currency_copy_counts": {
+        "adp_c": 11,
+        "atp_c": 12,
+        "coa_c": 9,
+        "nad_c": 12,
+        "nadh_c": 12,
+        "amp_c": 2,
+        "nadp_c": 9,
+        "nadph_c": 9,
+        "q8_c": 4,
+        "q8h2_c": 4
+      },
+      "reverse_only_reactions": [
+        "FORt"
+      ],
+      "blocked_reactions": [],
+      "missing_gene_rule_count": 0
+    },
+    "glucose_is_top_left_compound": true,
+    "perimeter_exclusive_to_exchanges": true,
+    "all_exchanges_connected_to_major_pathways": true
+  },
+  "limitations": [
+    "Global length optimality is reported, not assumed.",
+    "Crossings, coincident edge paths, and label overlap are not minimized.",
+    "Display model omits inorganic participants and is not suitable for FBA.",
+    "Escher draws direct segments; orthogonal length objective describes layout.svg and layout.png.",
+    "Sampling uses original bounds without a growth floor or loopless constraints; internal cycles may dominate."
+  ],
+  "program_name": "sbml2escher",
+  "extraction_status": "complete_central_backbone",
+  "exchange_connectors": {
+    "color": "#f28e2b",
+    "edge_indices": [
+      4,
+      6,
+      16,
+      17,
+      21,
+      22,
+      25,
+      26,
+      29,
+      30,
+      31,
+      32,
+      47,
+      48,
+      63,
+      64,
+      70,
+      81,
+      90,
+      91,
+      100,
+      101,
+      104,
+      105,
+      110,
+      111,
+      139,
+      140,
+      141,
+      142,
+      143,
+      145,
+      146,
+      147,
+      148,
+      156,
+      157,
+      191,
+      192,
+      204,
+      207
+    ],
+    "root_node_ids": [
+      "met:13dpg_c",
+      "met:2pg_c",
+      "met:3pg_c",
+      "met:accoa_c",
+      "met:acon_C_c",
+      "met:akg_c",
+      "met:cit_c",
+      "met:dhap_c",
+      "met:f6p_c",
+      "met:fdp_c",
+      "met:fum_c",
+      "met:g3p_c",
+      "met:g6p_c",
+      "met:glc__D_e",
+      "met:icit_c",
+      "met:mal__L_c",
+      "met:oaa_c",
+      "met:pep_c",
+      "met:pyr_c",
+      "met:succ_c",
+      "met:succoa_c",
+      "rxn:ACONTa",
+      "rxn:ACONTb",
+      "rxn:AKGDH",
+      "rxn:CS",
+      "rxn:ENO",
+      "rxn:EX_glc__D_e",
+      "rxn:FBA",
+      "rxn:FUM",
+      "rxn:GAPD",
+      "rxn:GLCpts",
+      "rxn:ICDHyr",
+      "rxn:MDH",
+      "rxn:PDH",
+      "rxn:PFK",
+      "rxn:PGI",
+      "rxn:PGK",
+      "rxn:PGM",
+      "rxn:PYK",
+      "rxn:SUCDi",
+      "rxn:SUCOAS",
+      "rxn:TPI"
+    ],
+    "exchange_paths": {
+      "rxn:EX_ac_e": [
+        "met:accoa_c",
+        "rxn:PTAr",
+        "met:actp_c",
+        "rxn:ACKr",
+        "met:ac_c",
+        "rxn:ACt2r",
+        "met:ac_e",
+        "rxn:EX_ac_e"
+      ],
+      "rxn:EX_acald_e": [
+        "met:accoa_c",
+        "rxn:ACALD",
+        "met:acald_c",
+        "rxn:ACALDt",
+        "met:acald_e",
+        "rxn:EX_acald_e"
+      ],
+      "rxn:EX_akg_e": [
+        "met:akg_c",
+        "rxn:AKGt2r",
+        "met:akg_e",
+        "rxn:EX_akg_e"
+      ],
+      "rxn:EX_etoh_e": [
+        "met:accoa_c",
+        "rxn:ACALD",
+        "met:acald_c",
+        "rxn:ALCD2x",
+        "met:etoh_c",
+        "rxn:ETOHt2r",
+        "met:etoh_e",
+        "rxn:EX_etoh_e"
+      ],
+      "rxn:EX_for_e": [
+        "met:accoa_c",
+        "rxn:PFL",
+        "met:for_c",
+        "rxn:FORt",
+        "met:for_e",
+        "rxn:EX_for_e"
+      ],
+      "rxn:EX_glc__D_e": [
+        "rxn:EX_glc__D_e"
+      ],
+      "rxn:EX_glu__L_e": [
+        "met:3pg_c",
+        "rxn:BIOMASS_Ecoli_core_w_GAM",
+        "met:glu__L_c",
+        "rxn:GLUt2r",
+        "met:glu__L_e",
+        "rxn:EX_glu__L_e"
+      ],
+      "rxn:EX_lac__D_e": [
+        "met:pyr_c",
+        "rxn:LDH_D",
+        "met:lac__D_c",
+        "rxn:D_LACt2",
+        "met:lac__D_e",
+        "rxn:EX_lac__D_e"
+      ],
+      "rxn:EX_pyr_e": [
+        "met:pyr_c",
+        "rxn:PYRt2",
+        "met:pyr_e",
+        "rxn:EX_pyr_e"
+      ],
+      "rxn:EX_succ_e": [
+        "met:succ_c",
+        "rxn:SUCCt2_2",
+        "met:succ_e",
+        "rxn:EX_succ_e"
+      ]
+    },
+    "all_exchanges_connected": true,
+    "disconnected_exchange_node_ids": [],
+    "connectivity": "Undirected displayed stoichiometric incidence; coenzyme copies excluded; red backbone allowed",
+    "objective": "Sum of Manhattan lengths of unique orange incidence edges; shared edges counted once",
+    "method": "Greedy shared shortest-path forest alternating with constrained grid placement",
+    "global_optimality_proven": false,
+    "total_length": 78,
+    "shared_coenzyme_ids": [],
+    "optimization_history": [
+      {
+        "iteration": 1,
+        "before_reroute": 101,
+        "orange_length": 101,
+        "optimized_fixed_network_length": 101
+      },
+      {
+        "iteration": 2,
+        "before_reroute": 78,
+        "orange_length": 78,
+        "optimized_fixed_network_length": 78
+      }
+    ]
+  },
+  "orange_orthogonal_edge_length": 78
+}

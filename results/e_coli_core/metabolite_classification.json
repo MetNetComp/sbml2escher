@@ -1,0 +1,506 @@
+{
+  "glc__D_e": {
+    "kind": "organic",
+    "reason": "Mapped BiGG/KEGG chemical role: glc__D",
+    "name": "D-Glucose",
+    "formula": "C6H12O6",
+    "formula_missing": false
+  },
+  "gln__L_c": {
+    "kind": "organic",
+    "reason": "retained; no inorganic/coenzyme rule matched",
+    "name": "L-Glutamine",
+    "formula": "C5H10N2O3",
+    "formula_missing": false
+  },
+  "gln__L_e": {
+    "kind": "organic",
+    "reason": "retained; no inorganic/coenzyme rule matched",
+    "name": "L-Glutamine",
+    "formula": "C5H10N2O3",
+    "formula_missing": false
+  },
+  "glu__L_c": {
+    "kind": "organic",
+    "reason": "retained; no inorganic/coenzyme rule matched",
+    "name": "L-Glutamate",
+    "formula": "C5H8NO4",
+    "formula_missing": false
+  },
+  "glu__L_e": {
+    "kind": "organic",
+    "reason": "retained; no inorganic/coenzyme rule matched",
+    "name": "L-Glutamate",
+    "formula": "C5H8NO4",
+    "formula_missing": false
+  },
+  "glx_c": {
+    "kind": "organic",
+    "reason": "retained; no inorganic/coenzyme rule matched",
+    "name": "Glyoxylate",
+    "formula": "C2H1O3",
+    "formula_missing": false
+  },
+  "h2o_c": {
+    "kind": "inorganic",
+    "reason": "Mapped BiGG/KEGG chemical role: h2o",
+    "name": "H2O H2O",
+    "formula": "H2O",
+    "formula_missing": false
+  },
+  "h2o_e": {
+    "kind": "inorganic",
+    "reason": "Mapped BiGG/KEGG chemical role: h2o",
+    "name": "H2O H2O",
+    "formula": "H2O",
+    "formula_missing": false
+  },
+  "h_c": {
+    "kind": "inorganic",
+    "reason": "Mapped BiGG/KEGG chemical role: h",
+    "name": "H+",
+    "formula": "H",
+    "formula_missing": false
+  },
+  "h_e": {
+    "kind": "inorganic",
+    "reason": "Mapped BiGG/KEGG chemical role: h",
+    "name": "H+",
+    "formula": "H",
+    "formula_missing": false
+  },
+  "icit_c": {
+    "kind": "organic",
+    "reason": "Mapped BiGG/KEGG chemical role: icit",
+    "name": "Isocitrate",
+    "formula": "C6H5O7",
+    "formula_missing": false
+  },
+  "lac__D_c": {
+    "kind": "organic",
+    "reason": "Mapped BiGG/KEGG chemical role: lac__D",
+    "name": "D-Lactate",
+    "formula": "C3H5O3",
+    "formula_missing": false
+  },
+  "lac__D_e": {
+    "kind": "organic",
+    "reason": "Mapped BiGG/KEGG chemical role: lac__D",
+    "name": "D-Lactate",
+    "formula": "C3H5O3",
+    "formula_missing": false
+  },
+  "mal__L_c": {
+    "kind": "organic",
+    "reason": "Mapped BiGG/KEGG chemical role: mal__L",
+    "name": "L-Malate",
+    "formula": "C4H4O5",
+    "formula_missing": false
+  },
+  "mal__L_e": {
+    "kind": "organic",
+    "reason": "Mapped BiGG/KEGG chemical role: mal__L",
+    "name": "L-Malate",
+    "formula": "C4H4O5",
+    "formula_missing": false
+  },
+  "nad_c": {
+    "kind": "coenzyme",
+    "reason": "Mapped BiGG/KEGG chemical role: nad",
+    "name": "Nicotinamide adenine dinucleotide",
+    "formula": "C21H26N7O14P2",
+    "formula_missing": false
+  },
+  "nadh_c": {
+    "kind": "coenzyme",
+    "reason": "Mapped BiGG/KEGG chemical role: nadh",
+    "name": "Nicotinamide adenine dinucleotide - reduced",
+    "formula": "C21H27N7O14P2",
+    "formula_missing": false
+  },
+  "nadp_c": {
+    "kind": "coenzyme",
+    "reason": "Mapped BiGG/KEGG chemical role: nadp",
+    "name": "Nicotinamide adenine dinucleotide phosphate",
+    "formula": "C21H25N7O17P3",
+    "formula_missing": false
+  },
+  "nadph_c": {
+    "kind": "coenzyme",
+    "reason": "Mapped BiGG/KEGG chemical role: nadph",
+    "name": "Nicotinamide adenine dinucleotide phosphate - reduced",
+    "formula": "C21H26N7O17P3",
+    "formula_missing": false
+  },
+  "nh4_c": {
+    "kind": "inorganic",
+    "reason": "Mapped BiGG/KEGG chemical role: nh4",
+    "name": "Ammonium",
+    "formula": "H4N",
+    "formula_missing": false
+  },
+  "13dpg_c": {
+    "kind": "organic",
+    "reason": "Mapped BiGG/KEGG chemical role: 13dpg",
+    "name": "3-Phospho-D-glyceroyl phosphate",
+    "formula": "C3H4O10P2",
+    "formula_missing": false
+  },
+  "nh4_e": {
+    "kind": "inorganic",
+    "reason": "Mapped BiGG/KEGG chemical role: nh4",
+    "name": "Ammonium",
+    "formula": "H4N",
+    "formula_missing": false
+  },
+  "o2_c": {
+    "kind": "inorganic",
+    "reason": "Mapped BiGG/KEGG chemical role: o2",
+    "name": "O2 O2",
+    "formula": "O2",
+    "formula_missing": false
+  },
+  "2pg_c": {
+    "kind": "organic",
+    "reason": "Mapped BiGG/KEGG chemical role: 2pg",
+    "name": "D-Glycerate 2-phosphate",
+    "formula": "C3H4O7P",
+    "formula_missing": false
+  },
+  "o2_e": {
+    "kind": "inorganic",
+    "reason": "Mapped BiGG/KEGG chemical role: o2",
+    "name": "O2 O2",
+    "formula": "O2",
+    "formula_missing": false
+  },
+  "3pg_c": {
+    "kind": "organic",
+    "reason": "Mapped BiGG/KEGG chemical role: 3pg",
+    "name": "3-Phospho-D-glycerate",
+    "formula": "C3H4O7P",
+    "formula_missing": false
+  },
+  "oaa_c": {
+    "kind": "organic",
+    "reason": "Mapped BiGG/KEGG chemical role: oaa",
+    "name": "Oxaloacetate",
+    "formula": "C4H2O5",
+    "formula_missing": false
+  },
+  "pep_c": {
+    "kind": "organic",
+    "reason": "Mapped BiGG/KEGG chemical role: pep",
+    "name": "Phosphoenolpyruvate",
+    "formula": "C3H2O6P",
+    "formula_missing": false
+  },
+  "6pgc_c": {
+    "kind": "organic",
+    "reason": "Mapped BiGG/KEGG chemical role: 6pgc",
+    "name": "6-Phospho-D-gluconate",
+    "formula": "C6H10O10P",
+    "formula_missing": false
+  },
+  "pi_c": {
+    "kind": "inorganic",
+    "reason": "Mapped BiGG/KEGG chemical role: pi",
+    "name": "Phosphate",
+    "formula": "HO4P",
+    "formula_missing": false
+  },
+  "6pgl_c": {
+    "kind": "organic",
+    "reason": "Mapped BiGG/KEGG chemical role: 6pgl",
+    "name": "6-phospho-D-glucono-1,5-lactone",
+    "formula": "C6H9O9P",
+    "formula_missing": false
+  },
+  "pi_e": {
+    "kind": "inorganic",
+    "reason": "Mapped BiGG/KEGG chemical role: pi",
+    "name": "Phosphate",
+    "formula": "HO4P",
+    "formula_missing": false
+  },
+  "ac_c": {
+    "kind": "organic",
+    "reason": "Mapped BiGG/KEGG chemical role: ac",
+    "name": "Acetate",
+    "formula": "C2H3O2",
+    "formula_missing": false
+  },
+  "pyr_c": {
+    "kind": "organic",
+    "reason": "Mapped BiGG/KEGG chemical role: pyr",
+    "name": "Pyruvate",
+    "formula": "C3H3O3",
+    "formula_missing": false
+  },
+  "pyr_e": {
+    "kind": "organic",
+    "reason": "Mapped BiGG/KEGG chemical role: pyr",
+    "name": "Pyruvate",
+    "formula": "C3H3O3",
+    "formula_missing": false
+  },
+  "q8_c": {
+    "kind": "coenzyme",
+    "reason": "Mapped BiGG/KEGG chemical role: q8",
+    "name": "Ubiquinone-8",
+    "formula": "C49H74O4",
+    "formula_missing": false
+  },
+  "q8h2_c": {
+    "kind": "coenzyme",
+    "reason": "Mapped BiGG/KEGG chemical role: q8h2",
+    "name": "Ubiquinol-8",
+    "formula": "C49H76O4",
+    "formula_missing": false
+  },
+  "r5p_c": {
+    "kind": "organic",
+    "reason": "Mapped BiGG/KEGG chemical role: r5p",
+    "name": "Alpha-D-Ribose 5-phosphate",
+    "formula": "C5H9O8P",
+    "formula_missing": false
+  },
+  "ru5p__D_c": {
+    "kind": "organic",
+    "reason": "Mapped BiGG/KEGG chemical role: ru5p__D",
+    "name": "D-Ribulose 5-phosphate",
+    "formula": "C5H9O8P",
+    "formula_missing": false
+  },
+  "ac_e": {
+    "kind": "organic",
+    "reason": "Mapped BiGG/KEGG chemical role: ac",
+    "name": "Acetate",
+    "formula": "C2H3O2",
+    "formula_missing": false
+  },
+  "acald_c": {
+    "kind": "organic",
+    "reason": "Mapped BiGG/KEGG chemical role: acald",
+    "name": "Acetaldehyde",
+    "formula": "C2H4O",
+    "formula_missing": false
+  },
+  "s7p_c": {
+    "kind": "organic",
+    "reason": "Mapped BiGG/KEGG chemical role: s7p",
+    "name": "Sedoheptulose 7-phosphate",
+    "formula": "C7H13O10P",
+    "formula_missing": false
+  },
+  "acald_e": {
+    "kind": "organic",
+    "reason": "Mapped BiGG/KEGG chemical role: acald",
+    "name": "Acetaldehyde",
+    "formula": "C2H4O",
+    "formula_missing": false
+  },
+  "accoa_c": {
+    "kind": "organic",
+    "reason": "Mapped BiGG/KEGG chemical role: accoa",
+    "name": "Acetyl-CoA",
+    "formula": "C23H34N7O17P3S",
+    "formula_missing": false
+  },
+  "succ_c": {
+    "kind": "organic",
+    "reason": "Mapped BiGG/KEGG chemical role: succ",
+    "name": "Succinate",
+    "formula": "C4H4O4",
+    "formula_missing": false
+  },
+  "succ_e": {
+    "kind": "organic",
+    "reason": "Mapped BiGG/KEGG chemical role: succ",
+    "name": "Succinate",
+    "formula": "C4H4O4",
+    "formula_missing": false
+  },
+  "succoa_c": {
+    "kind": "organic",
+    "reason": "Mapped BiGG/KEGG chemical role: succoa",
+    "name": "Succinyl-CoA",
+    "formula": "C25H35N7O19P3S",
+    "formula_missing": false
+  },
+  "acon_C_c": {
+    "kind": "organic",
+    "reason": "Mapped BiGG/KEGG chemical role: acon_C",
+    "name": "Cis-Aconitate",
+    "formula": "C6H3O6",
+    "formula_missing": false
+  },
+  "xu5p__D_c": {
+    "kind": "organic",
+    "reason": "Mapped BiGG/KEGG chemical role: xu5p__D",
+    "name": "D-Xylulose 5-phosphate",
+    "formula": "C5H9O8P",
+    "formula_missing": false
+  },
+  "actp_c": {
+    "kind": "organic",
+    "reason": "Mapped BiGG/KEGG chemical role: actp",
+    "name": "Acetyl phosphate",
+    "formula": "C2H3O5P",
+    "formula_missing": false
+  },
+  "adp_c": {
+    "kind": "coenzyme",
+    "reason": "Mapped BiGG/KEGG chemical role: adp",
+    "name": "ADP C10H12N5O10P2",
+    "formula": "C10H12N5O10P2",
+    "formula_missing": false
+  },
+  "akg_c": {
+    "kind": "organic",
+    "reason": "Mapped BiGG/KEGG chemical role: akg",
+    "name": "2-Oxoglutarate",
+    "formula": "C5H4O5",
+    "formula_missing": false
+  },
+  "akg_e": {
+    "kind": "organic",
+    "reason": "Mapped BiGG/KEGG chemical role: akg",
+    "name": "2-Oxoglutarate",
+    "formula": "C5H4O5",
+    "formula_missing": false
+  },
+  "amp_c": {
+    "kind": "coenzyme",
+    "reason": "Mapped BiGG/KEGG chemical role: amp",
+    "name": "AMP C10H12N5O7P",
+    "formula": "C10H12N5O7P",
+    "formula_missing": false
+  },
+  "atp_c": {
+    "kind": "coenzyme",
+    "reason": "Mapped BiGG/KEGG chemical role: atp",
+    "name": "ATP C10H12N5O13P3",
+    "formula": "C10H12N5O13P3",
+    "formula_missing": false
+  },
+  "cit_c": {
+    "kind": "organic",
+    "reason": "Mapped BiGG/KEGG chemical role: cit",
+    "name": "Citrate",
+    "formula": "C6H5O7",
+    "formula_missing": false
+  },
+  "co2_c": {
+    "kind": "inorganic",
+    "reason": "Mapped BiGG/KEGG chemical role: co2",
+    "name": "CO2 CO2",
+    "formula": "CO2",
+    "formula_missing": false
+  },
+  "co2_e": {
+    "kind": "inorganic",
+    "reason": "Mapped BiGG/KEGG chemical role: co2",
+    "name": "CO2 CO2",
+    "formula": "CO2",
+    "formula_missing": false
+  },
+  "coa_c": {
+    "kind": "coenzyme",
+    "reason": "Mapped BiGG/KEGG chemical role: coa",
+    "name": "Coenzyme A",
+    "formula": "C21H32N7O16P3S",
+    "formula_missing": false
+  },
+  "dhap_c": {
+    "kind": "organic",
+    "reason": "Mapped BiGG/KEGG chemical role: dhap",
+    "name": "Dihydroxyacetone phosphate",
+    "formula": "C3H5O6P",
+    "formula_missing": false
+  },
+  "e4p_c": {
+    "kind": "organic",
+    "reason": "Mapped BiGG/KEGG chemical role: e4p",
+    "name": "D-Erythrose 4-phosphate",
+    "formula": "C4H7O7P",
+    "formula_missing": false
+  },
+  "etoh_c": {
+    "kind": "organic",
+    "reason": "Mapped BiGG/KEGG chemical role: etoh",
+    "name": "Ethanol",
+    "formula": "C2H6O",
+    "formula_missing": false
+  },
+  "etoh_e": {
+    "kind": "organic",
+    "reason": "Mapped BiGG/KEGG chemical role: etoh",
+    "name": "Ethanol",
+    "formula": "C2H6O",
+    "formula_missing": false
+  },
+  "f6p_c": {
+    "kind": "organic",
+    "reason": "Mapped BiGG/KEGG chemical role: f6p",
+    "name": "D-Fructose 6-phosphate",
+    "formula": "C6H11O9P",
+    "formula_missing": false
+  },
+  "fdp_c": {
+    "kind": "organic",
+    "reason": "Mapped BiGG/KEGG chemical role: fdp",
+    "name": "D-Fructose 1,6-bisphosphate",
+    "formula": "C6H10O12P2",
+    "formula_missing": false
+  },
+  "for_c": {
+    "kind": "organic",
+    "reason": "Mapped BiGG/KEGG chemical role: for",
+    "name": "Formate",
+    "formula": "CH1O2",
+    "formula_missing": false
+  },
+  "for_e": {
+    "kind": "organic",
+    "reason": "Mapped BiGG/KEGG chemical role: for",
+    "name": "Formate",
+    "formula": "CH1O2",
+    "formula_missing": false
+  },
+  "fru_e": {
+    "kind": "organic",
+    "reason": "retained; no inorganic/coenzyme rule matched",
+    "name": "D-Fructose",
+    "formula": "C6H12O6",
+    "formula_missing": false
+  },
+  "fum_c": {
+    "kind": "organic",
+    "reason": "Mapped BiGG/KEGG chemical role: fum",
+    "name": "Fumarate",
+    "formula": "C4H2O4",
+    "formula_missing": false
+  },
+  "fum_e": {
+    "kind": "organic",
+    "reason": "Mapped BiGG/KEGG chemical role: fum",
+    "name": "Fumarate",
+    "formula": "C4H2O4",
+    "formula_missing": false
+  },
+  "g3p_c": {
+    "kind": "organic",
+    "reason": "Mapped BiGG/KEGG chemical role: g3p",
+    "name": "Glyceraldehyde 3-phosphate",
+    "formula": "C3H5O6P",
+    "formula_missing": false
+  },
+  "g6p_c": {
+    "kind": "organic",
+    "reason": "Mapped BiGG/KEGG chemical role: g6p",
+    "name": "D-Glucose 6-phosphate",
+    "formula": "C6H11O9P",
+    "formula_missing": false
+  }
+}

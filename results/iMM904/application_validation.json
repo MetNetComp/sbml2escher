@@ -1,0 +1,16 @@
+{
+  "independent_checks_passed": true,
+  "exclusive_EX_perimeter": true,
+  "all_EX_paths_verified": true,
+  "orange_length_recomputed": 1238.0,
+  "distinct_integer_grid_verified": true,
+  "inorganic_and_zero_median_exclusions_verified": true,
+  "source_model_unchanged": true,
+  "sample_checksum_verified": true,
+  "reactions": 848,
+  "grid_nodes": 1401,
+  "exchanges": 79,
+  "orange_edges": 362,
+  "sampling_converged": false,
+  "TCA_complete": false
+}
