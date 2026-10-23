@@ -22,6 +22,17 @@ source .venv/bin/activate
 python -m pip install -r requirements-layout.txt -r requirements-escher.txt
 ```
 
+On Ubuntu, if virtual environment creation fails because `ensurepip` is
+unavailable, install the venv package and then rerun the commands above:
+
+```bash
+sudo apt update
+sudo apt install python3-venv
+```
+
+If the error message names a version-specific package, install that package
+instead (for example, `python3.12-venv` for Python 3.12).
+
 The required Python packages are NumPy, SciPy, Matplotlib, and jsonschema.
 Optimization uses HiGHS through SciPy; no separate solver executable or MATLAB
 installation is required. A browser is needed to view the interactive output.
